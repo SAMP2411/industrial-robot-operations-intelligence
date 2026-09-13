@@ -1,0 +1,53 @@
+name: test-matrix
+on:
+  push:
+  pull_request:
+jobs:
+  sqlite:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install -e '.[test]'
+      - run: python -m pytest tests --ignore=tests/browser --cov=packages --cov=apps --cov-report=term-missing
+  postgres:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env: {POSTGRES_DB: rfii_test, POSTGRES_USER: rfii, POSTGRES_PASSWORD: test-password}
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U rfii -d rfii_test"
+          --health-interval 5s --health-timeout 3s --health-retries 20
+    env:
+      RFII_DATABASE_URL: postgresql+psycopg://rfii:test-password@localhost:5432/rfii_test
+      RFII_STORAGE_ROOT: /tmp/rfii-postgres-storage
+      POSTGRES_TEST_URL: postgresql+psycopg://rfii:test-password@localhost:5432/rfii_test
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install -e '.[postgres,test]'
+      - run: alembic upgrade head
+      - run: python -m pytest tests/postgres tests/integration
+  browser:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install -e '.[test]'
+      - run: python -m pytest tests/browser --tracing=retain-on-failure
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with: {name: browser-failure-artifacts, path: test-results}
+  migrations-release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install -e '.[test]'
+      - run: python -m pytest tests/migration tests/release

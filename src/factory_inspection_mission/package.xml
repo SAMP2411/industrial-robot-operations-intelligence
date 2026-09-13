@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>factory_inspection_mission</name>
+  <version>0.0.1</version>
+  <description>Mission-layer patrol loop for the Autonomous Factory Inspection Robot.</description>
+
+  <maintainer email="samarth@example.com">samarth</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>cv_bridge</depend>
+  <depend>factory_inspection_interfaces</depend>
+  <depend>geometry_msgs</depend>
+  <depend>launch_ros</depend>
+  <depend>nav2_bringup</depend>
+  <depend>nav2_common</depend>
+  <depend>nav2_core</depend>
+  <depend>nav2_msgs</depend>
+  <depend>nav2_minimal_tb4_description</depend>
+  <depend>nav2_minimal_tb4_sim</depend>
+  <depend>pluginlib</depend>
+  <depend>rclcpp</depend>
+  <depend>rclcpp_action</depend>
+  <depend>rclcpp_lifecycle</depend>
+  <depend>sensor_msgs</depend>
+  <depend>visualization_msgs</depend>
+  <depend>xacro</depend>
+  <depend>yaml_cpp_vendor</depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+    <nav2_waypoint_follower plugin="${prefix}/plugins.xml" />
+  </export>
+</package>

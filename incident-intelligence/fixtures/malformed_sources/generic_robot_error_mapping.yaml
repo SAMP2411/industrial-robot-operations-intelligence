@@ -1,0 +1,20 @@
+mapping_version: "1.0"
+name: generic_robot_error_csv
+source_type: robot_log
+file:
+  format: csv
+timestamp:
+  field: event_time
+  timezone: UTC
+identity:
+  source_record_id: record_id
+asset_mapping:
+  external_asset_id_field: asset_id
+fields:
+  event_type: {from: event_type}
+  event_code: {from: event_code}
+  severity: {from: severity}
+  message: {from: message}
+  state_from: {from: state_from}
+  state_to: {from: state_to}
+

@@ -1,0 +1,38 @@
+map_frame: map
+
+checkpoints:
+  - name: loading_bay
+    x: 0.50
+    y: 0.00
+    yaw: 0.00
+    inspection_mode: visual_gauge
+    inspection_label: gauge_nominal
+    inspection_severity: normal
+    recommended_action: continue_patrol
+
+  - name: gauge_panel
+    x: 1.75
+    y: 0.20
+    yaw: 1.57
+    inspection_mode: visual_gauge
+    inspection_label: gauge_high_alarm
+    inspection_severity: critical
+    recommended_action: dispatch_operator_immediately
+
+  - name: conveyor_exit
+    x: 1.80
+    y: -1.20
+    yaw: 3.14
+    inspection_mode: visual_gauge
+    inspection_label: needle_drift
+    inspection_severity: warning
+    recommended_action: schedule_recheck
+
+  - name: charging_corner
+    x: 0.30
+    y: -1.10
+    yaw: -1.57
+    inspection_mode: visual_gauge
+    inspection_label: gauge_nominal
+    inspection_severity: normal
+    recommended_action: continue_patrol

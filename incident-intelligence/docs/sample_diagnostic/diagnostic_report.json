@@ -1,0 +1,116 @@
+{
+  "data_quality": {
+    "issues": [
+      {
+        "description": "The synthetic PLC clock has a reviewed +850 ms offset; close ordering is marked uncertain."
+      },
+      {
+        "description": "The controller diagnostic trace is missing, limiting causal certainty."
+      }
+    ]
+  },
+  "demonstration_label": "SYNTHETIC DEMONSTRATION \u2014 NOT CUSTOMER DATA",
+  "evidence": [
+    {
+      "note": "18-second release-to-open interval overlaps the stop.",
+      "reference": "EV-SYN-001",
+      "relation": "supports"
+    },
+    {
+      "note": "No packet-loss record exists in the available synthetic Wi-Fi window.",
+      "reference": "EV-SYN-002",
+      "relation": "contradicts"
+    },
+    {
+      "note": "Door controller diagnostic trace was intentionally omitted from the fixture.",
+      "reference": "EV-SYN-003",
+      "relation": "missing_expected"
+    }
+  ],
+  "hypotheses": [
+    {
+      "confidence": 0.74,
+      "evidence_reference": "HYP-SYN-001",
+      "status": "analyst-supported",
+      "title": "Door interlock response delay"
+    },
+    {
+      "confidence": 0.28,
+      "evidence_reference": "HYP-SYN-002",
+      "status": "alternative",
+      "title": "Wi-Fi roaming interruption"
+    }
+  ],
+  "incident": {
+    "business_impact": "One synthetic transport task paused for 214 seconds; no safety event or customer production impact is represented.",
+    "description": "A synthetic robot stopped at a controlled door after the fleet route request preceded the door-open confirmation. The available evidence supports an interlock delay as the leading hypothesis, while a Wi-Fi interruption remains an explicitly reviewed alternative.",
+    "id": "SYN-DOOR-001",
+    "recovered_at": "2026-01-15T10:05:45Z",
+    "started_at": "2026-01-15T10:02:11Z",
+    "title": "Door interlock delayed robot route recovery"
+  },
+  "metrics": {
+    "business_recovery_seconds": 214,
+    "technical_recovery_seconds": 151,
+    "unplanned_downtime_seconds": 214
+  },
+  "provenance": {
+    "generated_at": "2026-07-19T00:00:00Z",
+    "generated_by": "sample-generator"
+  },
+  "schema_version": "diagnostic_report.v1",
+  "status": "demonstration",
+  "template": {
+    "generator_version": "rfii-sample.v1",
+    "profile": "technical",
+    "version": "report.v1"
+  },
+  "timeline": [
+    {
+      "event_code": "BLOCKED_PATH",
+      "message": "Robot stopped before Door D-17",
+      "occurred_at": "2026-01-15T10:02:11Z",
+      "raw_evidence": {
+        "raw_record_id": "RAW-SYN-001"
+      },
+      "source": "robot export"
+    },
+    {
+      "event_code": "DOOR_RELEASE",
+      "message": "Fleet requested door release",
+      "occurred_at": "2026-01-15T10:02:13Z",
+      "raw_evidence": {
+        "raw_record_id": "RAW-SYN-002"
+      },
+      "source": "fleet export"
+    },
+    {
+      "event_code": "DOOR_OPEN",
+      "message": "PLC confirmed open state",
+      "occurred_at": "2026-01-15T10:02:31Z",
+      "raw_evidence": {
+        "raw_record_id": "RAW-SYN-003"
+      },
+      "source": "door PLC export"
+    },
+    {
+      "event_code": "MISSION_RESUMED",
+      "message": "Robot navigation resumed",
+      "occurred_at": "2026-01-15T10:04:42Z",
+      "raw_evidence": {
+        "raw_record_id": "RAW-SYN-004"
+      },
+      "source": "robot export"
+    },
+    {
+      "event_code": "TASK_RESUMED",
+      "message": "Synthetic transport workflow recovered",
+      "occurred_at": "2026-01-15T10:05:45Z",
+      "raw_evidence": {
+        "raw_record_id": "RAW-SYN-005"
+      },
+      "source": "WCS export"
+    }
+  ],
+  "version": 1
+}

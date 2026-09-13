@@ -1,0 +1,24 @@
+groups:
+  - name: rfii-pilot
+    rules:
+      - alert: RFIIApiUnavailable
+        expr: up{job="rfii-api"} == 0
+        for: 2m
+      - alert: RFIIJobFailures
+        expr: rfii_jobs_failed > 2
+        for: 5m
+      - alert: RFIIWorkerHeartbeatMissing
+        expr: time() - rfii_worker_last_heartbeat_seconds > 120
+        for: 2m
+      - alert: RFIIRepeatedLoginFailures
+        expr: increase(rfii_login_failures_total[10m]) > 10
+      - alert: RFIIEvidenceStorageHigh
+        expr: rfii_storage_bytes > 0.85 * rfii_storage_capacity_bytes
+      - alert: RFIIBackupOverdue
+        expr: time() - rfii_last_backup_success_seconds > 90000
+      - alert: RFIIChecksumFailure
+        expr: increase(rfii_checksum_failures_total[5m]) > 0
+      - alert: RFIIMigrationMismatch
+        expr: rfii_migration_current != rfii_migration_expected
+      - alert: RFIIReportGenerationFailure
+        expr: increase(rfii_report_generation_failures_total[15m]) > 2

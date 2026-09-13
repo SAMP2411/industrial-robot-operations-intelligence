@@ -1,0 +1,21 @@
+profiles:
+  tb4:
+    display_name: "TurtleBot 4 Inspection Scout"
+    platform_profile: "tb4"
+    robot_name_prefix: "tb4"
+    narrative_role: "compact wheeled scout"
+    default_route_role: "general_patrol"
+
+  spot_like:
+    display_name: "Spot-Like Inspection Rover"
+    platform_profile: "spot_like"
+    robot_name_prefix: "spot"
+    narrative_role: "agile quadruped-inspired rover"
+    default_route_role: "rapid_response"
+
+  anymal_like:
+    display_name: "ANYmal-Like Inspection Rover"
+    platform_profile: "anymal_like"
+    robot_name_prefix: "anymal"
+    narrative_role: "heavy-duty all-terrain inspection rover"
+    default_route_role: "high_reliability_utilities"

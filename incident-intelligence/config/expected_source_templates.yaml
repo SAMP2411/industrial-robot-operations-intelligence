@@ -1,0 +1,16 @@
+version: expected-sources.v1
+templates:
+  network/Wi-Fi:
+    suggested:
+      - robot/fleet timestamps
+      - Wi-Fi controller events
+      - AP association/roaming data
+      - WCS communication evidence
+      - switch/network alerts if available
+    source_keywords: [wifi, wi-fi, network, access_point, fleet, robot, wcs]
+  charging:
+    suggested: [robot charging events, charger/controller log, power-quality evidence, maintenance history]
+    source_keywords: [charging, charger, power, robot, maintenance]
+  PLC/control:
+    suggested: [PLC event history, request/response trace, connected equipment log, operator actions]
+    source_keywords: [plc, control, wcs, operator]

@@ -1,0 +1,49 @@
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-incident_intelligence}
+      POSTGRES_USER: ${POSTGRES_USER:-rfii}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in .env}
+    volumes: [postgres_data:/var/lib/postgresql/data]
+    healthcheck:
+      test: [CMD-SHELL, "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    restart: unless-stopped
+  api:
+    build:
+      context: .
+      dockerfile: deployment/docker/Dockerfile
+    environment:
+      RFII_DATABASE_URL: postgresql+psycopg://${POSTGRES_USER:-rfii}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB:-incident_intelligence}
+      RFII_STORAGE_ROOT: /data
+      RFII_AUTH_REQUIRED: "true"
+      RFII_SECRET_KEY: ${RFII_SECRET_KEY:?set RFII_SECRET_KEY in .env}
+      RFII_APP_ENV: production
+    volumes: [evidence_data:/data]
+    ports: ["${RFII_PORT:-8000}:8000"]
+    depends_on:
+      db: {condition: service_healthy}
+    healthcheck:
+      test: [CMD, "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 10s
+      timeout: 3s
+      retries: 12
+    restart: unless-stopped
+  worker:
+    build:
+      context: .
+      dockerfile: deployment/docker/Dockerfile
+    command: ["sh", "-c", "while true; do python -m apps.report_worker.worker || test $$? -eq 2; sleep 2; done"]
+    environment:
+      RFII_DATABASE_URL: postgresql+psycopg://${POSTGRES_USER:-rfii}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB:-incident_intelligence}
+      RFII_STORAGE_ROOT: /data
+    volumes: [evidence_data:/data]
+    depends_on:
+      db: {condition: service_healthy}
+    restart: unless-stopped
+volumes:
+  postgres_data:
+  evidence_data:

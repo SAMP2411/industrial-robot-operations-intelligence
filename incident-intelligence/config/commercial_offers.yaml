@@ -1,0 +1,14 @@
+version: offers.v1
+offers:
+  incident_diagnostic:
+    name: Incident Diagnostic
+    planning_price_eur: {minimum: 1000, maximum: 3000}
+    deliverables: [scoped data request, historical analysis, review meeting, technical report, vendor-support package]
+  multi_incident_review:
+    name: Multi-Incident Reliability Review
+    deliverables: [multiple historical incidents, recurring-pattern analysis, source-quality review, monitoring recommendations]
+  limited_on_prem_pilot:
+    name: Limited On-Prem Pilot
+    deliverables: [one site, selected read-only sources, fixed period, incident console, analyst support, agreed success metrics]
+    boundary: No control actions and no safety function.
+pricing_status: Planning ranges require buyer validation and are not validated market prices.

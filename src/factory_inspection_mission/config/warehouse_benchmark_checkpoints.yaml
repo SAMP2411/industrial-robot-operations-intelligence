@@ -1,0 +1,47 @@
+map_frame: map
+
+checkpoints:
+  - name: east_aisle
+    x: 4.20
+    y: -21.30
+    yaw: 0.00
+    inspection_mode: visual_gauge
+    inspection_label: gauge_nominal
+    inspection_severity: normal
+    recommended_action: continue_patrol
+
+  - name: upper_right_turn
+    x: 4.20
+    y: -18.50
+    yaw: 1.57
+    inspection_mode: visual_gauge
+    inspection_label: gauge_high_alarm
+    inspection_severity: critical
+    recommended_action: dispatch_operator_immediately
+
+  - name: upper_left_turn
+    x: 1.00
+    y: -18.50
+    yaw: 3.14
+    inspection_mode: visual_gauge
+    inspection_label: needle_drift
+    inspection_severity: warning
+    recommended_action: schedule_recheck
+
+  - name: west_aisle
+    x: 1.00
+    y: -21.30
+    yaw: -1.57
+    inspection_mode: visual_gauge
+    inspection_label: gauge_nominal
+    inspection_severity: normal
+    recommended_action: continue_patrol
+
+  - name: spawn_lane
+    x: 2.12
+    y: -21.30
+    yaw: 1.57
+    inspection_mode: visual_gauge
+    inspection_label: gauge_nominal
+    inspection_severity: normal
+    recommended_action: continue_patrol

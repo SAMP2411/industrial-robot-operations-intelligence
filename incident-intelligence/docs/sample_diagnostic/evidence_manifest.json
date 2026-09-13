@@ -1,0 +1,31 @@
+{
+  "demonstration_label": "SYNTHETIC DEMONSTRATION \u2014 NOT CUSTOMER DATA",
+  "files": [
+    {
+      "id": "RAW-SYN-001",
+      "source": "robot export",
+      "synthetic": true
+    },
+    {
+      "id": "RAW-SYN-002",
+      "source": "fleet export",
+      "synthetic": true
+    },
+    {
+      "id": "RAW-SYN-003",
+      "source": "door PLC export",
+      "synthetic": true
+    },
+    {
+      "id": "RAW-SYN-004",
+      "source": "robot export",
+      "synthetic": true
+    },
+    {
+      "id": "RAW-SYN-005",
+      "source": "WCS export",
+      "synthetic": true
+    }
+  ],
+  "schema_version": "evidence_manifest.v1"
+}

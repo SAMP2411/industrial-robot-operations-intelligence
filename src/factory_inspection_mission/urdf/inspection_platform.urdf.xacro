@@ -1,0 +1,391 @@
+<?xml version="1.0"?>
+<robot name="inspection_platform" xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:include filename="$(find nav2_minimal_tb4_description)/urdf/icreate/common_properties.urdf.xacro"/>
+  <xacro:include filename="$(find nav2_minimal_tb4_description)/urdf/icreate/wheel.urdf.xacro"/>
+  <xacro:include filename="$(find nav2_minimal_tb4_description)/urdf/icreate/caster.urdf.xacro"/>
+
+  <xacro:arg name="platform_profile" default="tb4"/>
+  <xacro:arg name="cmd_vel_topic" default="/cmd_vel"/>
+  <xacro:arg name="odom_topic" default="/odom"/>
+  <xacro:arg name="tf_topic" default="/tf"/>
+  <xacro:arg name="joint_states_topic" default="/joint_states"/>
+  <xacro:arg name="scan_topic" default="/scan"/>
+  <xacro:arg name="imu_topic" default="/imu"/>
+  <xacro:arg name="camera_topic_base" default="/rgbd_camera"/>
+
+  <xacro:property name="profile_name" value="$(arg platform_profile)"/>
+
+  <xacro:property name="body_z_offset" value="${-2.5 * cm2m}"/>
+  <xacro:property name="body_collision_z_offset" value="${1 * cm2m}"/>
+  <xacro:property name="body_mass" value="2.3"/>
+  <xacro:property name="body_radius" value="${16.4 * cm2m}"/>
+  <xacro:property name="body_length" value="${6 * cm2m}"/>
+  <xacro:property name="body_cog_x_offset" value="${2.28 * cm2m}"/>
+  <xacro:property name="wheel_height" value="${-2.75 * cm2m}"/>
+  <xacro:property name="distance_between_wheels" value="${23.3 * cm2m}"/>
+  <xacro:property name="caster_position_x" value="${12.5 * cm2m}"/>
+  <xacro:property name="caster_position_z" value="${-5.03 * cm2m}"/>
+  <xacro:property name="wheel_drop_offset_z" value="${3.5 * mm2m}"/>
+  <xacro:property name="wheel_drop_z" value="${wheel_height + wheel_drop_offset_z}"/>
+  <xacro:property name="base_link_z_offset" value="${6.42 * cm2m}"/>
+
+  <xacro:property name="shell_z_offset" value="${3 * cm2m}"/>
+  <xacro:property name="shell_mass" value="0.39"/>
+
+  <link name="base_link">
+    <visual>
+      <origin xyz="0 0 ${body_z_offset + base_link_z_offset}" rpy="0 0 ${pi / 2}"/>
+      <geometry>
+        <mesh filename="package://nav2_minimal_tb4_description/meshes/body_visual.dae"/>
+      </geometry>
+    </visual>
+    <collision name="create3_base_collision">
+      <origin xyz="0 0 ${body_z_offset + body_collision_z_offset + base_link_z_offset}" rpy="0 0 ${pi / 2}"/>
+      <geometry>
+        <cylinder length="${body_length}" radius="${body_radius}"/>
+      </geometry>
+    </collision>
+    <xacro:inertial_cylinder_with_pose mass="${body_mass}" radius="${body_radius}" length="${body_length}">
+      <origin xyz="${body_cog_x_offset} 0 ${body_collision_z_offset + base_link_z_offset}"/>
+    </xacro:inertial_cylinder_with_pose>
+  </link>
+
+  <gazebo reference="base_link">
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+
+  <joint name="base_footprint_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="base_footprint"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+  <link name="base_footprint">
+    <xacro:inertial_dummy/>
+  </link>
+
+  <joint name="shell_link_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="shell_link"/>
+    <origin xyz="0 0 ${shell_z_offset + base_link_z_offset}" rpy="0 0 0"/>
+  </joint>
+  <link name="shell_link">
+    <xacro:inertial_dummy/>
+
+    <xacro:if value="${profile_name == 'tb4'}">
+      <visual name="tb4_shell">
+        <origin xyz="0 0 0" rpy="${pi / 2} 0 ${pi / 2}"/>
+        <geometry>
+          <mesh filename="package://nav2_minimal_tb4_description/meshes/shell.dae" scale="1 1 1"/>
+        </geometry>
+      </visual>
+    </xacro:if>
+
+    <xacro:if value="${profile_name == 'spot_like'}">
+      <visual name="spot_body">
+        <origin xyz="0.03 0.0 0.08" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.46 0.22 0.16"/>
+        </geometry>
+        <material name="spot_body_color">
+          <color rgba="0.84 0.62 0.26 1.0"/>
+        </material>
+      </visual>
+      <visual name="spot_head">
+        <origin xyz="0.20 0.0 0.11" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.14 0.16 0.12"/>
+        </geometry>
+        <material name="spot_head_color">
+          <color rgba="0.12 0.12 0.12 1.0"/>
+        </material>
+      </visual>
+      <visual name="spot_leg_front_left">
+        <origin xyz="0.14 0.13 -0.02" rpy="0 0 0.16"/>
+        <geometry>
+          <cylinder radius="0.018" length="0.22"/>
+        </geometry>
+        <material name="spot_leg_color">
+          <color rgba="0.16 0.16 0.16 1.0"/>
+        </material>
+      </visual>
+      <visual name="spot_leg_front_right">
+        <origin xyz="0.14 -0.13 -0.02" rpy="0 0 -0.16"/>
+        <geometry>
+          <cylinder radius="0.018" length="0.22"/>
+        </geometry>
+        <material name="spot_leg_color_r">
+          <color rgba="0.16 0.16 0.16 1.0"/>
+        </material>
+      </visual>
+      <visual name="spot_leg_rear_left">
+        <origin xyz="-0.10 0.13 -0.02" rpy="0 0 -0.12"/>
+        <geometry>
+          <cylinder radius="0.018" length="0.22"/>
+        </geometry>
+        <material name="spot_leg_color_rl">
+          <color rgba="0.16 0.16 0.16 1.0"/>
+        </material>
+      </visual>
+      <visual name="spot_leg_rear_right">
+        <origin xyz="-0.10 -0.13 -0.02" rpy="0 0 0.12"/>
+        <geometry>
+          <cylinder radius="0.018" length="0.22"/>
+        </geometry>
+        <material name="spot_leg_color_rr">
+          <color rgba="0.16 0.16 0.16 1.0"/>
+        </material>
+      </visual>
+    </xacro:if>
+
+    <xacro:if value="${profile_name == 'anymal_like'}">
+      <visual name="anymal_body">
+        <origin xyz="0.00 0.0 0.10" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.40 0.26 0.18"/>
+        </geometry>
+        <material name="anymal_body_color">
+          <color rgba="0.58 0.64 0.70 1.0"/>
+        </material>
+      </visual>
+      <visual name="anymal_shoulder_front">
+        <origin xyz="0.15 0.0 0.13" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.10 0.32 0.08"/>
+        </geometry>
+        <material name="anymal_shoulder_front_color">
+          <color rgba="0.22 0.26 0.30 1.0"/>
+        </material>
+      </visual>
+      <visual name="anymal_shoulder_rear">
+        <origin xyz="-0.15 0.0 0.13" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.10 0.32 0.08"/>
+        </geometry>
+        <material name="anymal_shoulder_rear_color">
+          <color rgba="0.22 0.26 0.30 1.0"/>
+        </material>
+      </visual>
+      <visual name="anymal_leg_front_left">
+        <origin xyz="0.15 0.15 -0.02" rpy="0 0 0.18"/>
+        <geometry>
+          <cylinder radius="0.02" length="0.24"/>
+        </geometry>
+        <material name="anymal_leg_color">
+          <color rgba="0.25 0.28 0.31 1.0"/>
+        </material>
+      </visual>
+      <visual name="anymal_leg_front_right">
+        <origin xyz="0.15 -0.15 -0.02" rpy="0 0 -0.18"/>
+        <geometry>
+          <cylinder radius="0.02" length="0.24"/>
+        </geometry>
+        <material name="anymal_leg_color_r">
+          <color rgba="0.25 0.28 0.31 1.0"/>
+        </material>
+      </visual>
+      <visual name="anymal_leg_rear_left">
+        <origin xyz="-0.15 0.15 -0.02" rpy="0 0 -0.18"/>
+        <geometry>
+          <cylinder radius="0.02" length="0.24"/>
+        </geometry>
+        <material name="anymal_leg_color_rl">
+          <color rgba="0.25 0.28 0.31 1.0"/>
+        </material>
+      </visual>
+      <visual name="anymal_leg_rear_right">
+        <origin xyz="-0.15 -0.15 -0.02" rpy="0 0 0.18"/>
+        <geometry>
+          <cylinder radius="0.02" length="0.24"/>
+        </geometry>
+        <material name="anymal_leg_color_rr">
+          <color rgba="0.25 0.28 0.31 1.0"/>
+        </material>
+      </visual>
+    </xacro:if>
+  </link>
+
+  <gazebo reference="shell_link">
+    <material>Gazebo/Black</material>
+  </gazebo>
+
+  <xacro:wheel name="left" gazebo="ignition">
+    <origin xyz="0 ${distance_between_wheels / 2} ${wheel_drop_z + base_link_z_offset}" rpy="${-pi / 2} 0 0"/>
+  </xacro:wheel>
+  <xacro:wheel name="right" gazebo="ignition">
+    <origin xyz="0 ${-distance_between_wheels / 2} ${wheel_drop_z + base_link_z_offset}" rpy="${-pi / 2} 0 0"/>
+  </xacro:wheel>
+  <xacro:caster name="front_caster" parent_link="base_link">
+    <origin xyz="${caster_position_x} 0 ${caster_position_z + base_link_z_offset}" rpy="${-pi / 2} 0 0"/>
+  </xacro:caster>
+
+  <joint name="lidar_joint" type="fixed">
+    <parent link="shell_link"/>
+    <child link="lidar_link"/>
+    <origin xyz="-0.04 0 ${base_link_z_offset + 0.04}" rpy="0 0 ${pi / 2}"/>
+  </joint>
+  <link name="lidar_link">
+    <xacro:inertial_dummy/>
+    <visual>
+      <geometry>
+        <cylinder length="0.05" radius="0.055"/>
+      </geometry>
+      <material name="lidar_gray">
+        <color rgba="0.18 0.18 0.18 1.0"/>
+      </material>
+    </visual>
+  </link>
+
+  <gazebo reference="lidar_link">
+    <sensor name="rplidar" type="gpu_lidar">
+      <update_rate>10</update_rate>
+      <visualize>true</visualize>
+      <always_on>true</always_on>
+      <gz_frame_id>lidar_link</gz_frame_id>
+      <topic>$(arg scan_topic)</topic>
+      <lidar>
+        <scan>
+          <horizontal>
+            <samples>360</samples>
+            <resolution>1.0</resolution>
+            <min_angle>0.0</min_angle>
+            <max_angle>6.280000</max_angle>
+          </horizontal>
+        </scan>
+        <range>
+          <min>0.164</min>
+          <max>20.0</max>
+          <resolution>0.01</resolution>
+        </range>
+      </lidar>
+    </sensor>
+  </gazebo>
+
+  <joint name="imu_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="imu_link"/>
+    <origin xyz="0.05 0.04 ${base_link_z_offset + 0.02}" rpy="0 0 0"/>
+  </joint>
+  <link name="imu_link">
+    <xacro:inertial_dummy/>
+  </link>
+  <gazebo reference="imu_link">
+    <sensor type="imu" name="imu">
+      <always_on>true</always_on>
+      <update_rate>200</update_rate>
+      <topic>$(arg imu_topic)</topic>
+    </sensor>
+  </gazebo>
+
+  <joint name="rgbd_camera_joint" type="fixed">
+    <parent link="shell_link"/>
+    <child link="rgbd_camera_frame"/>
+    <origin xyz="-0.05 0 ${base_link_z_offset + 0.07}" rpy="0 0 0"/>
+  </joint>
+  <link name="rgbd_camera_frame">
+    <xacro:inertial_dummy/>
+    <visual>
+      <origin xyz="0.06 0 0.03" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.10 0.05 0.04"/>
+      </geometry>
+      <material name="camera_black">
+        <color rgba="0.10 0.10 0.12 1.0"/>
+      </material>
+    </visual>
+  </link>
+
+  <joint name="rgbd_camera_optical_joint" type="fixed">
+    <parent link="rgbd_camera_frame"/>
+    <child link="rgbd_camera_optical_frame"/>
+    <origin xyz="0.03 0 0" rpy="-${pi / 2} 0 -${pi / 2}"/>
+  </joint>
+  <link name="rgbd_camera_optical_frame">
+    <xacro:inertial_dummy/>
+  </link>
+
+  <gazebo reference="rgbd_camera_frame">
+    <sensor name="rgbd_camera" type="rgbd_camera">
+      <always_on>1</always_on>
+      <camera>
+        <horizontal_fov>1.25</horizontal_fov>
+        <image>
+          <width>320</width>
+          <height>240</height>
+        </image>
+        <clip>
+          <near>0.3</near>
+          <far>100</far>
+        </clip>
+        <optical_frame_id>rgbd_camera_optical_frame</optical_frame_id>
+      </camera>
+      <update_rate>10</update_rate>
+      <visualize>true</visualize>
+      <topic>$(arg camera_topic_base)</topic>
+    </sensor>
+  </gazebo>
+
+  <joint name="finder_beacon_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="finder_beacon_link"/>
+    <origin xyz="0 0 ${base_link_z_offset + 0.16}" rpy="0 0 0"/>
+  </joint>
+  <link name="finder_beacon_link">
+    <xacro:inertial_dummy/>
+    <visual name="finder_mast">
+      <origin xyz="0 0 0.32" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.012" length="0.64"/>
+      </geometry>
+      <material name="finder_orange">
+        <color rgba="1.0 0.4 0.0 1.0"/>
+      </material>
+    </visual>
+    <visual name="finder_beacon">
+      <origin xyz="0 0 0.68" rpy="0 0 0"/>
+      <geometry>
+        <sphere radius="0.08"/>
+      </geometry>
+      <material name="finder_orange_glow">
+        <color rgba="1.0 0.55 0.05 1.0"/>
+      </material>
+    </visual>
+    <visual name="finder_ring">
+      <origin xyz="0 0 0.56" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.13" length="0.02"/>
+      </geometry>
+      <material name="finder_cyan">
+        <color rgba="0.1 0.9 1.0 0.9"/>
+      </material>
+    </visual>
+  </link>
+
+  <gazebo>
+    <plugin filename="gz-sim-diff-drive-system" name="gz::sim::systems::DiffDrive">
+      <left_joint>left_wheel_joint</left_joint>
+      <right_joint>right_wheel_joint</right_joint>
+      <wheel_separation>0.233</wheel_separation>
+      <wheel_radius>0.03575</wheel_radius>
+      <max_linear_acceleration>2</max_linear_acceleration>
+      <min_linear_acceleration>-2</min_linear_acceleration>
+      <max_angular_acceleration>3</max_angular_acceleration>
+      <min_angular_acceleration>-3</min_angular_acceleration>
+      <max_linear_velocity>0.5</max_linear_velocity>
+      <min_linear_velocity>-0.5</min_linear_velocity>
+      <max_angular_velocity>2.0</max_angular_velocity>
+      <min_angular_velocity>-2.0</min_angular_velocity>
+      <topic>$(arg cmd_vel_topic)</topic>
+      <odom_topic>$(arg odom_topic)</odom_topic>
+      <tf_topic>$(arg tf_topic)</tf_topic>
+      <frame_id>odom</frame_id>
+      <child_frame_id>base_link</child_frame_id>
+      <odom_publish_frequency>30</odom_publish_frequency>
+    </plugin>
+
+    <plugin filename="gz-sim-joint-state-publisher-system" name="gz::sim::systems::JointStatePublisher">
+      <joint_name>left_wheel_joint</joint_name>
+      <joint_name>right_wheel_joint</joint_name>
+      <topic>$(arg joint_states_topic)</topic>
+    </plugin>
+  </gazebo>
+</robot>

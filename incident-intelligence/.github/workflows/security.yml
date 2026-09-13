@@ -1,0 +1,30 @@
+name: security
+on:
+  push:
+  pull_request:
+jobs:
+  python-security:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install -e '.[test]' pip-audit==2.9.0 bandit==1.8.6 cyclonedx-bom==7.1.0
+      - run: pip-audit
+      - run: bandit -r apps packages connectors -x tests
+      - run: cyclonedx-py environment --output-file sbom-python.json
+      - uses: actions/upload-artifact@v4
+        with: {name: python-sbom, path: sbom-python.json}
+  secrets:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: gitleaks/gitleaks-action@v2
+  container:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker build -f deployment/docker/Dockerfile -t rfii:ci .
+      - uses: aquasecurity/trivy-action@0.28.0
+        with: {image-ref: "rfii:ci", format: "table", exit-code: "1", severity: "CRITICAL,HIGH"}

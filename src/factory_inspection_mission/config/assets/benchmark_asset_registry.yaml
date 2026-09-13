@@ -1,0 +1,202 @@
+schema_version: asset_registry.v1
+site_id: factory_demo_site
+assets:
+  - asset_id: CNV-510
+    name: Packing Conveyor Drive
+    asset_type: conveyor_drive
+    zone: packing_lane
+    priority: 3
+    criticality: HIGH
+    owner_team: packaging_ops
+    inspection_profile_id: conveyor_drive_standard
+    status: ACTIVE
+    enabled_modalities: [visual, thermal, acoustic]
+    tags: [benchmark, conveyor, packaging]
+    checkpoint:
+      name: spawn_lane
+      x: 2.12
+      y: -21.30
+      yaw: 1.57
+      viewpoint_id: vp_spawn_lane
+      position_tolerance_m: 1.75
+      orientation_tolerance_rad: 0.35
+
+  - asset_id: PMP-101
+    name: Feed Pump Skid
+    asset_type: pump
+    zone: mixing_line
+    priority: 5
+    criticality: CRITICAL
+    owner_team: mixing_ops
+    inspection_profile_id: pump_standard
+    status: ACTIVE
+    enabled_modalities: [visual, thermal, acoustic]
+    tags: [benchmark, pump, mixing]
+    checkpoint:
+      name: east_aisle
+      x: 4.20
+      y: -21.30
+      yaw: 0.00
+      viewpoint_id: vp_east_aisle
+      position_tolerance_m: 1.75
+      orientation_tolerance_rad: 0.35
+
+  - asset_id: CMP-220
+    name: Compressor Cell
+    asset_type: compressor
+    zone: utilities_bay
+    priority: 5
+    criticality: CRITICAL
+    owner_team: utilities_ops
+    inspection_profile_id: compressor_gas_watch
+    status: ACTIVE
+    enabled_modalities: [visual, thermal, acoustic, gas]
+    tags: [benchmark, compressor, utilities, gas]
+    checkpoint:
+      name: upper_right_turn
+      x: 4.20
+      y: -18.50
+      yaw: 1.57
+      viewpoint_id: vp_upper_right_turn
+      position_tolerance_m: 1.75
+      orientation_tolerance_rad: 0.35
+
+  - asset_id: PNL-315
+    name: Power Distribution Panel
+    asset_type: electrical_panel
+    zone: power_room
+    priority: 4
+    criticality: HIGH
+    owner_team: electrical_maintenance
+    inspection_profile_id: electrical_panel_standard
+    status: ACTIVE
+    enabled_modalities: [visual, thermal]
+    tags: [benchmark, electrical, panel]
+    checkpoint:
+      name: upper_left_turn
+      x: 1.00
+      y: -18.50
+      yaw: 3.14
+      viewpoint_id: vp_upper_left_turn
+      position_tolerance_m: 1.75
+      orientation_tolerance_rad: 0.35
+
+  - asset_id: VLV-410
+    name: Process Valve Cluster
+    asset_type: valve_manifold
+    zone: reactor_loop
+    priority: 4
+    criticality: HIGH
+    owner_team: process_ops
+    inspection_profile_id: valve_manifold_standard
+    status: ACTIVE
+    enabled_modalities: [visual, gas]
+    tags: [benchmark, valve, reactor]
+    checkpoint:
+      name: west_aisle
+      x: 1.00
+      y: -21.30
+      yaw: -1.57
+      viewpoint_id: vp_west_aisle
+      position_tolerance_m: 1.75
+      orientation_tolerance_rad: 0.35
+
+  - asset_id: DRV-610
+    name: Palletizer Drive Pack
+    asset_type: conveyor_drive
+    zone: dispatch_bay
+    priority: 4
+    criticality: HIGH
+    owner_team: dispatch_ops
+    inspection_profile_id: conveyor_drive_standard
+    status: ACTIVE
+    enabled_modalities: [visual, thermal, acoustic]
+    tags: [benchmark, dispatch, drive]
+    checkpoint:
+      name: mid_east_service_bay
+      x: 8.50
+      y: -8.00
+      yaw: 3.14
+      viewpoint_id: vp_mid_east_service_bay
+      position_tolerance_m: 1.75
+      orientation_tolerance_rad: 0.35
+
+  - asset_id: UTL-720
+    name: Utilities Pump Bay
+    asset_type: pump
+    zone: utility_corridor
+    priority: 4
+    criticality: HIGH
+    owner_team: utilities_ops
+    inspection_profile_id: pump_standard
+    status: ACTIVE
+    enabled_modalities: [visual, thermal, acoustic]
+    tags: [benchmark, pump, utilities]
+    checkpoint:
+      name: upper_east_utility_lane
+      x: 10.00
+      y: 5.00
+      yaw: 3.14
+      viewpoint_id: vp_upper_east_utility_lane
+      position_tolerance_m: 1.75
+      orientation_tolerance_rad: 0.35
+
+  - asset_id: QCS-810
+    name: Quality Check Manifold
+    asset_type: valve_manifold
+    zone: quality_line
+    priority: 4
+    criticality: HIGH
+    owner_team: quality_ops
+    inspection_profile_id: valve_manifold_standard
+    status: ACTIVE
+    enabled_modalities: [visual, gas]
+    tags: [benchmark, valve, quality]
+    checkpoint:
+      name: north_center_crossing
+      x: -1.00
+      y: 15.00
+      yaw: 1.57
+      viewpoint_id: vp_north_center_crossing
+      position_tolerance_m: 1.75
+      orientation_tolerance_rad: 0.35
+
+  - asset_id: PWR-905
+    name: North Power Cabinet
+    asset_type: electrical_panel
+    zone: north_return
+    priority: 4
+    criticality: HIGH
+    owner_team: electrical_maintenance
+    inspection_profile_id: electrical_panel_standard
+    status: ACTIVE
+    enabled_modalities: [visual, thermal]
+    tags: [benchmark, power, electrical]
+    checkpoint:
+      name: north_west_return
+      x: -4.00
+      y: 21.00
+      yaw: 0.00
+      viewpoint_id: vp_north_west_return
+      position_tolerance_m: 1.75
+      orientation_tolerance_rad: 0.35
+
+  - asset_id: VLV-455
+    name: West Valve Cluster
+    asset_type: valve_manifold
+    zone: reactor_return
+    priority: 3
+    criticality: MEDIUM
+    owner_team: process_ops
+    inspection_profile_id: valve_manifold_standard
+    status: ACTIVE
+    enabled_modalities: [visual, gas]
+    tags: [benchmark, valve, west]
+    checkpoint:
+      name: mid_west_aisle
+      x: -7.00
+      y: -8.00
+      yaw: 0.00
+      viewpoint_id: vp_mid_west_aisle
+      position_tolerance_m: 1.75
+      orientation_tolerance_rad: 0.35

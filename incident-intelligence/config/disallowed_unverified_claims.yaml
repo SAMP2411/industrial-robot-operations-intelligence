@@ -1,0 +1,30 @@
+claim_policy_version: "1.0"
+scan_paths:
+  - README.md
+  - docs/product
+  - docs/architecture
+  - docs/diagnostics
+  - docs/sample_diagnostic
+phrases:
+  - production-ready
+  - validated pricing
+  - proven MTTR reduction
+  - automatic root cause
+  - supports all vendors
+  - predictive maintenance
+  - commercially validated
+  - secure by certification
+allowed_context_markers:
+  - "not "
+  - "no "
+  - "do not "
+  - "does not "
+  - "cannot "
+  - "must not "
+  - "not yet "
+  - "non-goal"
+  - "unlike "
+excluded_paths:
+  - docs/project_dossier
+  - docs/phase_reports
+  - docs/CURRENT_STATUS_FOR_PLAN_COMPARISON.md

@@ -1,0 +1,62 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 5 0 R >> >> /Contents 4 0 R >>
+endobj
+4 0 obj
+<< /Length 1695 >>
+stream
+BT /F1 9 Tf 48 750 Td 12 TL
+(SYNTHETIC DEMONSTRATION ? NOT CUSTOMER DATA) Tj T*
+(Incident Diagnostic ? Door interlock delayed robot route recovery) Tj T*
+(Report version 1 | Template technical report.v1) Tj T*
+(Generated 2026-07-19T00:00:00Z) Tj T*
+() Tj T*
+(Executive summary) Tj T*
+(A synthetic robot stopped at a controlled door after the fleet route request preceded the) Tj T*
+(door-open confirmation. The available evidence supports an interlock delay as the leading) Tj T*
+(hypothesis, while a Wi-Fi interruption remains an explicitly reviewed alternative.) Tj T*
+() Tj T*
+(Impact: One synthetic transport task paused for 214 seconds; no safety event or customer) Tj T*
+(production impact is represented.) Tj T*
+(Unplanned downtime: 214 seconds) Tj T*
+() Tj T*
+(Hypotheses) Tj T*
+([HYP-SYN-001] Door interlock response delay ? confidence 0.74) Tj T*
+([HYP-SYN-002] Wi-Fi roaming interruption ? confidence 0.28) Tj T*
+() Tj T*
+(Timeline \(each row cites immutable evidence\)) Tj T*
+(2026-01-15T10:02:11Z [RAW-SYN-001] BLOCKED_PATH Robot stopped before Door D-17) Tj T*
+(2026-01-15T10:02:13Z [RAW-SYN-002] DOOR_RELEASE Fleet requested door release) Tj T*
+(2026-01-15T10:02:31Z [RAW-SYN-003] DOOR_OPEN PLC confirmed open state) Tj T*
+(2026-01-15T10:04:42Z [RAW-SYN-004] MISSION_RESUMED Robot navigation resumed) Tj T*
+(2026-01-15T10:05:45Z [RAW-SYN-005] TASK_RESUMED Synthetic transport workflow recovered) Tj T*
+() Tj T*
+(Limitations) Tj T*
+(The synthetic PLC clock has a reviewed +850 ms offset; close ordering is marked uncertain.) Tj T*
+(The controller diagnostic trace is missing, limiting causal certainty.) Tj T*
+0 -20 Td (SYNTHETIC DEMONSTRATION ? NOT CUSTOMER DATA ? Page 1/1) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000121 00000 n 
+0000000247 00000 n 
+0000001994 00000 n 
+trailer << /Size 6 /Root 1 0 R >>
+startxref
+2064
+%%EOF

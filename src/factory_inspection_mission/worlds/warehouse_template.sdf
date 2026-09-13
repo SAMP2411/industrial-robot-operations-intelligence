@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='ASCII'?>
+<sdf version='1.7'>
+  <world name='warehouse'>
+    <physics name="1ms" type="ode">
+      <max_step_size>0.003</max_step_size>
+      <real_time_update_rate>1000.0</real_time_update_rate>
+      <real_time_factor>1.0</real_time_factor>
+    </physics>
+
+    <plugin filename="gz-sim-physics-system" name="gz::sim::systems::Physics">
+    </plugin>
+    <plugin filename="gz-sim-user-commands-system" name="gz::sim::systems::UserCommands">
+    </plugin>
+    <plugin filename="gz-sim-scene-broadcaster-system" name="gz::sim::systems::SceneBroadcaster">
+    </plugin>
+    <plugin filename="gz-sim-sensors-system" name="gz::sim::systems::Sensors">
+      <render_engine>ogre2</render_engine>
+    </plugin>
+    <plugin filename="gz-sim-imu-system" name="gz::sim::systems::Imu">
+    </plugin>
+
+    <scene>
+      <ambient>1 1 1 1</ambient>
+      <background>0.3 0.7 0.9 1</background>
+      <shadows>0</shadows>
+      <grid>false</grid>
+    </scene>
+
+    <model name='ground_plane'>
+      <static>true</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <plane>
+              <normal>0.0 0.0 1</normal>
+              <size>1 1</size>
+            </plane>
+          </geometry>
+        </collision>
+      </link>
+      <pose>0 0 0 0 0 0</pose>
+    </model>
+
+    <include>
+      <uri>model://warehouse</uri>
+      <name>warehouse</name>
+      <pose>0 0 -0.1 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://shelf_big</uri>
+      <name>shelf_big_0</name>
+      <pose>-8.5 -13 0 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>model://shelf_big</uri>
+      <name>shelf_big_1</name>
+      <pose>6.5 -13 0 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>model://shelf_big</uri>
+      <name>shelf_big_2</name>
+      <pose>-1.5 -13 0 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>model://shelf</uri>
+      <name>shelf_3</name>
+      <pose>13.5 4.5 0 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>model://shelf</uri>
+      <name>shelf_4</name>
+      <pose>10 4.5 0 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>model://shelf</uri>
+      <name>shelf_5</name>
+      <pose>13.5 -21 0 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>model://shelf</uri>
+      <name>shelf_6</name>
+      <pose>13.5 -15 0 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>model://shelf</uri>
+      <name>shelf_7</name>
+      <pose>0.4 -2 0 0 -0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://shelf_big</uri>
+      <name>shelf_big_3</name>
+      <pose>3.5 9.5 0 0 0 1.57</pose>
+    </include>
+    <include>
+      <uri>model://shelf_big</uri>
+      <name>shelf_big_4</name>
+      <pose>-1.3 18.5 0 0 0 1.57</pose>
+    </include>
+    <include>
+      <uri>model://shelf</uri>
+      <name>shelf_0</name>
+      <pose>-10 21.5 0 0 -0 1.57</pose>
+    </include>
+    <include>
+      <uri>model://shelf</uri>
+      <name>shelf_1</name>
+      <pose>-7 23.6 0 0 -0 1.57</pose>
+    </include>
+    <include>
+      <uri>model://shelf</uri>
+      <name>shelf_2</name>
+      <pose>-4 21.5 0 0 -0 1.57</pose>
+    </include>
+
+    <!-- GENERATED_DYNAMIC_MODELS -->
+  </world>
+</sdf>

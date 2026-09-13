@@ -1,0 +1,138 @@
+map_frame: map
+scenario_id: "advanced_multimodal_seed_4242"
+run_id: "advanced_multimodal_seed_4242_20260405T235808261293+0000"
+mission_profile: "routine_autonomous_round"
+seed: 4242
+ground_truth_file: "/home/samarth/.ros/factory_inspection/benchmark/scenario/ground_truth.yaml"
+selected_asset_ids: ["CNV-510", "PMP-101", "CMP-220", "PNL-315", "VLV-410", "DRV-610", "UTL-720", "QCS-810", "PWR-905", "VLV-455"]
+
+checkpoints:
+  - name: spawn_lane
+    station_id: spawn_lane
+    asset_id: CNV-510
+    asset_display_name: "Packing Conveyor Drive"
+    asset_type: "conveyor_drive"
+    zone: "packing_lane"
+    asset_priority: 3
+    enabled_modalities: ["visual", "thermal", "acoustic"]
+    x: 2.12
+    y: -21.30
+    yaw: 1.57
+    inspection_mode: visual_station
+
+  - name: east_aisle
+    station_id: east_aisle
+    asset_id: PMP-101
+    asset_display_name: "Feed Pump Skid"
+    asset_type: "pump"
+    zone: "mixing_line"
+    asset_priority: 5
+    enabled_modalities: ["visual", "thermal", "acoustic"]
+    x: 4.20
+    y: -21.30
+    yaw: 0.00
+    inspection_mode: visual_station
+
+  - name: upper_right_turn
+    station_id: upper_right_turn
+    asset_id: CMP-220
+    asset_display_name: "Compressor Cell"
+    asset_type: "compressor"
+    zone: "utilities_bay"
+    asset_priority: 5
+    enabled_modalities: ["visual", "thermal", "acoustic", "gas"]
+    x: 4.20
+    y: -18.50
+    yaw: 1.57
+    inspection_mode: visual_station
+
+  - name: upper_left_turn
+    station_id: upper_left_turn
+    asset_id: PNL-315
+    asset_display_name: "Power Distribution Panel"
+    asset_type: "electrical_panel"
+    zone: "power_room"
+    asset_priority: 4
+    enabled_modalities: ["visual", "thermal"]
+    x: 1.00
+    y: -18.50
+    yaw: 3.14
+    inspection_mode: visual_station
+
+  - name: west_aisle
+    station_id: west_aisle
+    asset_id: VLV-410
+    asset_display_name: "Process Valve Cluster"
+    asset_type: "valve_manifold"
+    zone: "reactor_loop"
+    asset_priority: 4
+    enabled_modalities: ["visual", "gas"]
+    x: 1.00
+    y: -21.30
+    yaw: -1.57
+    inspection_mode: visual_station
+
+  - name: mid_east_service_bay
+    station_id: mid_east_service_bay
+    asset_id: DRV-610
+    asset_display_name: "Palletizer Drive Pack"
+    asset_type: "conveyor_drive"
+    zone: "dispatch_bay"
+    asset_priority: 4
+    enabled_modalities: ["visual", "thermal", "acoustic"]
+    x: 8.50
+    y: -8.00
+    yaw: 3.14
+    inspection_mode: visual_station
+
+  - name: upper_east_utility_lane
+    station_id: upper_east_utility_lane
+    asset_id: UTL-720
+    asset_display_name: "Utilities Pump Bay"
+    asset_type: "pump"
+    zone: "utility_corridor"
+    asset_priority: 4
+    enabled_modalities: ["visual", "thermal", "acoustic"]
+    x: 10.00
+    y: 5.00
+    yaw: 3.14
+    inspection_mode: visual_station
+
+  - name: north_center_crossing
+    station_id: north_center_crossing
+    asset_id: QCS-810
+    asset_display_name: "Quality Check Manifold"
+    asset_type: "valve_manifold"
+    zone: "quality_line"
+    asset_priority: 4
+    enabled_modalities: ["visual", "gas"]
+    x: -1.00
+    y: 15.00
+    yaw: 1.57
+    inspection_mode: visual_station
+
+  - name: north_west_return
+    station_id: north_west_return
+    asset_id: PWR-905
+    asset_display_name: "North Power Cabinet"
+    asset_type: "electrical_panel"
+    zone: "north_return"
+    asset_priority: 4
+    enabled_modalities: ["visual", "thermal"]
+    x: -4.00
+    y: 21.00
+    yaw: 0.00
+    inspection_mode: visual_station
+
+  - name: mid_west_aisle
+    station_id: mid_west_aisle
+    asset_id: VLV-455
+    asset_display_name: "West Valve Cluster"
+    asset_type: "valve_manifold"
+    zone: "reactor_return"
+    asset_priority: 3
+    enabled_modalities: ["visual", "gas"]
+    x: -7.00
+    y: -8.00
+    yaw: 0.00
+    inspection_mode: visual_station

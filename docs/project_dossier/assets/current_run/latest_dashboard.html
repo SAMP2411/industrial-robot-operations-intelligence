@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Factory Inspection Round 2</title>
+<style>
+:root{--bg:#f4efe7;--panel:#fffdf8;--ink:#161a1d;--muted:#61676f;--line:#d8d2c8;--ok:#2f855a;--warn:#b7791f;--critical:#c53030;--accent:#0f4c5c;--teal:#2c7a7b;}
+*{box-sizing:border-box}body{margin:0;font-family:Georgia,'Times New Roman',serif;background:radial-gradient(circle at top left,#f8f3ea 0%,#efe6d8 45%,#e5ece7 100%);color:var(--ink);}
+.page{max-width:1320px;margin:0 auto;padding:28px 18px 48px;display:grid;gap:22px;}
+.hero{display:grid;grid-template-columns:2.2fr 1fr;gap:18px;align-items:stretch;}
+.hero-card,.panel,.tile,.asset-card,.zone-card{background:rgba(255,253,248,.94);border:1px solid var(--line);border-radius:22px;box-shadow:0 22px 54px rgba(27,21,15,.08);}
+.hero-card{padding:28px;background:linear-gradient(135deg,#0f4c5c 0%,#216869 58%,#f7ebd5 180%);color:#fff;}
+.eyebrow{font:700 .78rem/1.1 Arial,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#dff1ec;}
+.hero-card h1{margin:10px 0 12px;font-size:clamp(2rem,4vw,3.4rem);line-height:1.02;}
+.hero-card p{margin:0;max-width:46rem;color:rgba(255,255,255,.86);font-family:Arial,sans-serif;line-height:1.45;}
+.meta-row{margin-top:18px;display:flex;gap:10px;flex-wrap:wrap;}
+.badge{display:inline-flex;align-items:center;padding:6px 12px;border-radius:999px;font:700 .77rem/1 Arial,sans-serif;letter-spacing:.05em;text-transform:uppercase;}
+.badge-normal{background:#e3f4ea;color:var(--ok);} .badge-warning{background:#fff1d7;color:var(--warn);} .badge-critical{background:#fde2e2;color:var(--critical);} .badge-accent{background:#dceff1;color:var(--accent);}
+.decision{padding:22px;display:grid;gap:12px;}
+.decision .note{padding:14px 16px;border-radius:16px;background:#f5efe6;border:1px dashed #d9cdb8;color:#554c42;font-family:Arial,sans-serif;line-height:1.5;}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;}
+.tile{padding:18px}.tile .k{font:600 .78rem/1.2 Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}.tile .v{margin-top:10px;font-size:1.72rem;font-weight:700}
+.split{display:grid;grid-template-columns:1.4fr .9fr;gap:18px;}
+.panel{padding:22px;display:grid;gap:16px;}
+.panel h2{margin:0;font-size:1.2rem;letter-spacing:.02em;}
+.zones{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;}
+.zone-card{padding:16px;background:#fffdfa;}
+.zone-card strong{display:block;font-size:1rem;margin-bottom:8px;}
+.zone-card p{margin:0;color:var(--muted);font-family:Arial,sans-serif;line-height:1.5;}
+.follow-up{display:grid;gap:12px;}
+.asset-card{padding:16px;display:grid;gap:10px;background:#fffdfa;}
+.asset-card p{margin:0;color:var(--muted);font-family:Arial,sans-serif;line-height:1.45;}
+.evidence-list{display:grid;gap:14px;}
+.evidence{display:grid;grid-template-columns:170px 1fr;gap:14px;padding:16px;border:1px solid var(--line);border-radius:18px;background:#fffdf9;}
+.evidence img{width:170px;height:128px;object-fit:cover;border-radius:14px;border:1px solid var(--line);background:#ece7df;}
+.evidence-body{display:grid;gap:8px;}
+.evidence-body p{margin:0;color:var(--muted);font-family:Arial,sans-serif;line-height:1.45;}
+.site-map{padding:8px;border-radius:18px;background:#fff9ef;border:1px solid #e7dbc8;}
+@media (max-width:960px){.hero,.split{grid-template-columns:1fr}.evidence{grid-template-columns:1fr}.evidence img{width:100%;height:auto;max-height:280px;}}
+</style>
+</head>
+<body>
+<div class="page">
+<section class="hero">
+<div class="hero-card">
+<div class="eyebrow">Autonomous Factory Inspection Robot</div>
+<h1>Mission Round 2</h1>
+<p>Scenario <strong>advanced_multimodal_seed_6262</strong> ran with profile <strong>targeted_follow_up</strong>. The robot fused visual, thermal, acoustic, and gas-style inspection signals to prioritize follow-up assets and decide whether to continue the patrol.</p>
+<div class="meta-row">
+<span class="badge badge-accent">SUCCEEDED</span>
+<span class="badge badge-accent">Decision: RESUME_WATCHLIST</span>
+<span class="badge badge-accent">Run: advanced_multimodal_seed_6262_20260405T233534116702+0000</span>
+<span class="badge badge-accent">Targets: CMP-220, CNV-510</span>
+</div>
+</div>
+<aside class="panel decision">
+<h2>Operator Decision</h2>
+<span class="badge badge-accent">RESUME_WATCHLIST</span>
+<div class="note">Follow-up assets remained stable across repeated passes. Resuming routine patrol while keeping them on the watchlist.</div>
+<p><strong>Follow-up assets:</strong> CMP-220, CNV-510<br/><strong>Average health:</strong> 73.4<br/><strong>Average confidence:</strong> 0.99<br/><strong>Review queue:</strong> 0<br/><strong>Lowest health:</strong> 73.1</p>
+</aside>
+</section>
+<section class="stats">
+<div class="tile"><div class="k">Duration</div><div class="v">27.6 s</div></div>
+<div class="tile"><div class="k">Inspections</div><div class="v">2</div></div>
+<div class="tile"><div class="k">Anomalies</div><div class="v">2</div></div>
+<div class="tile"><div class="k">Critical</div><div class="v">0</div></div>
+<div class="tile"><div class="k">Review Queue</div><div class="v">0</div></div>
+<div class="tile"><div class="k">Avg Health</div><div class="v">73.4</div></div>
+<div class="tile"><div class="k">Confidence</div><div class="v">0.99</div></div>
+<div class="tile"><div class="k">Accuracy</div><div class="v">100%</div></div>
+<div class="tile"><div class="k">Thermal Alerts</div><div class="v">0</div></div>
+<div class="tile"><div class="k">Gas Alerts</div><div class="v">0</div></div>
+</section>
+<section class="split">
+<div class="panel">
+<h2>Digital Twin View</h2>
+<div class="site-map"><svg viewBox="0 0 640 280" role="img" aria-label="Factory inspection site map"><rect x="8" y="8" width="624" height="264" rx="22" fill="#f6f0e5" stroke="#d9cfbf"/><path d="M 36 220 L 604 220" stroke="#c8b9a1" stroke-dasharray="10 8" fill="none"/><path d="M 120 40 L 120 240 M 320 40 L 320 240 M 520 40 L 520 240" stroke="#ebe0d0" fill="none"/><circle cx="604.0" cy="36.0" r="12" fill="#d69e2e" stroke="#20303a" stroke-width="2"/><text x="620.0" y="40.0" font-size="12" font-family="Arial,sans-serif" fill="#1e1d1b">CMP-220</text><circle cx="36.0" cy="244.0" r="12" fill="#d69e2e" stroke="#20303a" stroke-width="2"/><text x="52.0" y="248.0" font-size="12" font-family="Arial,sans-serif" fill="#1e1d1b">CNV-510</text></svg></div>
+</div>
+<div class="panel">
+<h2>Zone Summary</h2>
+<div class="zones">
+<article class="zone-card"><strong>packing_lane</strong><p>Inspections: 1<br/>Anomalies: 1<br/>Critical: 0<br/>Avg Health: 73.7</p></article>
+<article class="zone-card"><strong>utilities_bay</strong><p>Inspections: 1<br/>Anomalies: 1<br/>Critical: 0<br/>Avg Health: 73.1</p></article>
+</div>
+</div>
+</section>
+<section class="split">
+<div class="panel">
+<h2>Prioritized Assets</h2>
+<div class="follow-up">
+<article class="asset-card"><div><strong>Compressor Cell</strong> <span class="badge badge-warning">warning</span></div>
+<p>ID: CMP-220 | Zone: utilities_bay | Type: compressor | Priority: 5</p>
+<p>Label: belt_slip | Confidence: 0.99 | Health: 73.1 | Sources: visual+acoustic</p>
+<p>Modalities: visual, thermal, acoustic, gas | Thermal 13.9 C | Acoustic 79.8 dB | Gas 4.9 ppm</p>
+</article>
+<article class="asset-card"><div><strong>Packing Conveyor Drive</strong> <span class="badge badge-warning">warning</span></div>
+<p>ID: CNV-510 | Zone: packing_lane | Type: conveyor_drive | Priority: 3</p>
+<p>Label: roller_imbalance | Confidence: 0.99 | Health: 73.7 | Sources: visual+acoustic</p>
+<p>Modalities: visual, thermal, acoustic | Thermal 14.9 C | Acoustic 78.3 dB | Gas 0.0 ppm</p>
+</article>
+</div>
+</div>
+<div class="panel">
+<h2>Mission Integrity</h2>
+<p style="margin:0;color:var(--muted);font-family:Arial,sans-serif;line-height:1.55;">Matched 2 of 2 labeled assets. False positives: 0. False negatives: 0. Precision / Recall / F1: 100% / 100% / 100%. Capture failures: 0. Nav2 error code: 0.</p>
+<p style="margin:0;color:var(--muted);font-family:Arial,sans-serif;line-height:1.55;">Recommended follow-up: CMP-220, CNV-510.</p>
+</div>
+</section>
+<section class="panel">
+<h2>Checkpoint Evidence</h2>
+<div class="evidence-list">
+<article class="evidence">
+<img src="file:///home/samarth/.ros/factory_inspection/benchmark/0000_upper_right_turn_belt_slip_11574609000000_annotated.png" alt="Evidence image for upper_right_turn" />
+<div class="evidence-body">
+<div><strong>upper_right_turn</strong> <span class="badge badge-warning">warning</span></div>
+<p>Asset: Compressor Cell (CMP-220) | Zone: utilities_bay | Status: needs_service</p>
+<p>Label: belt_slip | Truth: belt_slip | Match: true | Sources: visual+acoustic</p>
+<p>Thermal 13.9 C | Acoustic 79.8 dB | Gas 4.9 ppm | Health 73.1 | Confidence 0.99</p>
+<p>Recommended action: schedule_recheck | Image path: /home/samarth/.ros/factory_inspection/benchmark/0000_upper_right_turn_belt_slip_11574609000000_annotated.png</p>
+<p>Raw evidence: /home/samarth/.ros/factory_inspection/benchmark/0000_upper_right_turn_belt_slip_11574609000000_raw.png</p>
+<p>Note: visual_station color=yellow red=0 yellow=2245 green=54 score=2257.2 matched_checkpoint=upper_right_turn fused=belt_slip severity=warning health=73.1 confidence=0.99 sources=visual+acoustic review=none truth=belt_slip match=true</p>
+</div>
+</article>
+<article class="evidence">
+<img src="file:///home/samarth/.ros/factory_inspection/benchmark/0001_spawn_lane_roller_imbalance_11592675000000_annotated.png" alt="Evidence image for spawn_lane" />
+<div class="evidence-body">
+<div><strong>spawn_lane</strong> <span class="badge badge-warning">warning</span></div>
+<p>Asset: Packing Conveyor Drive (CNV-510) | Zone: packing_lane | Status: needs_service</p>
+<p>Label: roller_imbalance | Truth: roller_imbalance | Match: true | Sources: visual+acoustic</p>
+<p>Thermal 14.9 C | Acoustic 78.3 dB | Gas 0.0 ppm | Health 73.7 | Confidence 0.99</p>
+<p>Recommended action: schedule_recheck | Image path: /home/samarth/.ros/factory_inspection/benchmark/0001_spawn_lane_roller_imbalance_11592675000000_annotated.png</p>
+<p>Raw evidence: /home/samarth/.ros/factory_inspection/benchmark/0001_spawn_lane_roller_imbalance_11592675000000_raw.png</p>
+<p>Note: visual_station color=yellow red=0 yellow=1375 green=0 score=1672.9 matched_checkpoint=spawn_lane fused=roller_imbalance severity=warning health=73.7 confidence=0.99 sources=visual+acoustic review=none truth=roller_imbalance match=true</p>
+</div>
+</article>
+</div>
+</section>
+</div>
+</body>
+</html>

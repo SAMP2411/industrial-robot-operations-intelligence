@@ -1,0 +1,17 @@
+name: quality
+on:
+  push:
+  pull_request:
+jobs:
+  guardrails:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -e '.[test]'
+      - run: python scripts/validate_scorecard.py
+      - run: python scripts/lint_product_claims.py
+      - run: python scripts/scan_private_data.py
+      - run: python -m pytest tests/contract/test_scorecard_evidence.py tests/contract/test_product_scope.py

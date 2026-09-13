@@ -1,0 +1,10 @@
+schema_version: synthetic_fixture.v1
+name: Door and Wi-Fi ambiguity
+simulated: true
+sources:
+  - {file: robot.csv, type: robot_controller, clock_offset_ms: 0}
+  - {file: fleet.json, type: fleet_manager, clock_offset_ms: 0}
+  - {file: door_wifi.jsonl, type: infrastructure, clock_offset_ms: 3400}
+missing_sources: [wcs_network_trace]
+notes: Includes clock drift, irrelevant noise, and deliberately missing WCS evidence.
+

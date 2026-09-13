@@ -1,0 +1,5 @@
+{"records":[
+  {"record_id":"f1","event_time":"2026-04-09T14:30:05Z","asset_id":"FLEET-MGR-01","event_type":"fleet.task","event_code":"TASK_DELAYED","severity":"warning","message":"Waiting for WCS confirmation"},
+  {"record_id":"f2","event_time":"2026-04-09T14:42:01Z","asset_id":"FLEET-MGR-01","event_type":"fleet.task","event_code":"TASK_RESUMED","severity":"info","message":"Task confirmation received"}
+]}
+

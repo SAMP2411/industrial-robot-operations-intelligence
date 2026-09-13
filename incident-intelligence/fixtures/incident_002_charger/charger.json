@@ -1,0 +1,6 @@
+[
+  {"record_id":"c1","event_time":"2026-04-08T02:00:02Z","asset_id":"CHARGER-02","event_type":"plc.charger","event_code":"CHARGING_STARTED","severity":"info","message":"Contactor closed"},
+  {"record_id":"c2","event_time":"2026-04-08T02:02:11Z","asset_id":"CHARGER-02","event_type":"plc.charger","event_code":"CHARGING_CONTACT_LOST","severity":"error","message":"Intermittent pilot contact"},
+  {"record_id":"c3","event_time":"2026-04-08T02:20:15Z","asset_id":"CHARGER-02","event_type":"plc.charger","event_code":"CHARGING_RECOVERED","severity":"info","message":"Stable current detected"}
+]
+

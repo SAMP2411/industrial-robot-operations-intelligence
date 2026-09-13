@@ -1,0 +1,5 @@
+record_id,event_time,asset_id,event_type,event_code,severity,message
+r1,2026-04-09T14:30:00Z,AMR-11,robot.state,IDLE,info,Robot healthy and waiting
+r2,2026-04-09T14:42:02Z,AMR-11,robot.state,MISSION_RESUMED,info,Task received and motion started
+r3,2026-04-09T14:50:00Z,AMR-08,robot.state,HEARTBEAT,info,Irrelevant robot heartbeat
+

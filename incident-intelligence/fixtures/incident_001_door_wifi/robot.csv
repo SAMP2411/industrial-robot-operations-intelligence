@@ -1,0 +1,6 @@
+record_id,event_time,asset_id,event_type,event_code,severity,message
+r1,2026-04-07T09:13:00Z,AMR-07,robot.state,NAVIGATION_RECOVERY,warning,Robot approaches Door 04
+r2,2026-04-07T09:13:11Z,AMR-07,robot.error,BLOCKED_PATH,error,Path blocked at Door 04
+r3,2026-04-07T09:13:24Z,AMR-07,robot.state,MISSION_RESUMED,info,Navigation resumed
+r4,2026-04-07T09:15:00Z,AMR-12,robot.state,HEARTBEAT,info,Irrelevant heartbeat
+

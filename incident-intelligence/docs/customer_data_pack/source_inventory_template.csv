@@ -1,0 +1,2 @@
+source_name,source_type,owner,export_method,timezone,clock_notes,incident_window_start,incident_window_end,format,software_version,contains_personal_data,transfer_hash,permission_notes
+example-fleet-export,fleet_manager,customer automation team,read-only CSV export,Europe/Amsterdam,clock source unknown,2026-01-01T09:30:00+01:00,2026-01-01T10:30:00+01:00,CSV,replace-me,no,replace-after-transfer,synthetic example only

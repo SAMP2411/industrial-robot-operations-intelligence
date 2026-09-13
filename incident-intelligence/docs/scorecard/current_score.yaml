@@ -1,0 +1,128 @@
+scorecard_version: "1.0"
+status_date: "2026-07-19"
+expected_total: 91
+categories:
+  product_direction:
+    label: Product direction and scope
+    weight: 10
+    score: 10
+    target: 10
+    evidence:
+      - docs/product/product_definition.md
+      - docs/product/scope_and_non_goals.md
+    blockers: []
+    completion_conditions:
+      - Product remains read-only and incident-first
+  architecture:
+    label: Architecture and domain model
+    weight: 10
+    score: 10
+    target: 10
+    evidence:
+      - docs/architecture/system_architecture.md
+      - docs/schemas/domain_v1.md
+    blockers: []
+    completion_conditions:
+      - Versioned domain and migrations remain verified
+  ingestion:
+    label: Historical ingestion and provenance
+    weight: 10
+    score: 9
+    target: 10
+    evidence:
+      - docs/phase_reports/max_score_phases_02_to_10.md
+      - tests/unit/test_ingestion_hardening.py
+    blockers:
+      - No real export profile
+    completion_conditions:
+      - Large imperfect export processed with bounded memory
+      - First permitted real export profile passes contract tests
+  timeline:
+    label: Timeline and timestamp handling
+    weight: 15
+    score: 15
+    target: 15
+    evidence:
+      - docs/phase_reports/max_score_phases_02_to_10.md
+      - tests/unit/test_incident_timing.py
+    blockers: []
+    completion_conditions:
+      - Uncertain ordering is explicit
+      - Lifecycle timing and clock evidence are complete
+  incident:
+    label: Incident, downtime, and recovery
+    weight: 10
+    score: 10
+    target: 10
+    evidence:
+      - packages/incident_engine/service.py
+      - tests/unit/test_incident_timing.py
+    blockers: []
+    completion_conditions:
+      - All lifecycle metrics retain derivation metadata
+  evidence_quality:
+    label: Hypotheses, evidence, and data quality
+    weight: 10
+    score: 9
+    target: 10
+    evidence:
+      - docs/methodology/confidence_method.md
+      - packages/hypothesis_engine/service.py
+    blockers:
+      - Real calibration evidence is unavailable
+    completion_conditions:
+      - Evidence independence and reviewer agreement are recorded
+      - Real diagnostic calibration begins
+  reports:
+    label: Reports and vendor-support package
+    weight: 10
+    score: 9
+    target: 10
+    evidence:
+      - docs/sample_diagnostic/diagnostic_report.pdf
+      - tests/unit/test_buyer_reports.py
+    blockers:
+      - No target-user report review
+    completion_conditions:
+      - Structured PDF and redaction workflow pass
+      - Two target users review output
+  security_testing:
+    label: Security, deployment, and testing
+    weight: 10
+    score: 9
+    target: 10
+    evidence:
+      - docs/security/customer_security_pack/README.md
+      - tests/security/test_tenant_scope.py
+    blockers:
+      - No external security review
+    completion_conditions:
+      - Secure deployment and CI evidence pass
+      - External or customer review is recorded
+  analyst_console:
+    label: Analyst console and usability
+    weight: 10
+    score: 9
+    target: 10
+    evidence:
+      - apps/operator_console/index.html
+      - tests/browser/test_upload_preview_commit.py
+    blockers:
+      - No nondeveloper browser usability record
+    completion_conditions:
+      - Full diagnostic completes through browser only
+      - Browser E2E and role checks pass
+  commercial_validation:
+    label: Real-world and commercial validation
+    weight: 5
+    score: 1
+    target: 5
+    evidence:
+      - docs/validation/confidence_board.md
+    blockers:
+      - No real operator dataset
+      - No operator-reviewed actionable outcome
+      - No payment or pilot commitment
+    completion_conditions:
+      - Real diagnostic evidence exists
+      - Payment or concrete pilot evidence exists

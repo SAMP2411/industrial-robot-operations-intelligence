@@ -1,0 +1,21 @@
+<!doctype html><meta charset='utf-8'><title>Synthetic diagnostic</title><style>body{font:16px system-ui;max-width:960px;margin:2rem auto;line-height:1.55}h1,h2{color:#17365d}body:before{content:'SYNTHETIC DEMONSTRATION — NOT CUSTOMER DATA';display:block;background:#fff3cd;padding:1rem;font-weight:700}</style><body><h1>SYNTHETIC DEMONSTRATION — NOT CUSTOMER DATA</h1>
+<h1>Diagnostic report: Door interlock delayed robot route recovery</h1>
+<h2>Executive summary</h2>
+<p>A synthetic robot stopped at a controlled door after the fleet route request preceded the door-open confirmation. The available evidence supports an interlock delay as the leading hypothesis, while a Wi-Fi interruption remains an explicitly reviewed alternative.</p>
+<h2>Operational impact</h2>
+<p>One synthetic transport task paused for 214 seconds; no safety event or customer production impact is represented.</p>
+<h2>Downtime and recovery</h2>
+<p>- Unplanned downtime: 214 seconds</p>
+<p>- Technical recovery: 151 seconds</p>
+<p>- Business recovery: 214 seconds</p>
+<h2>Hypotheses</h2>
+<p>- [HYP-SYN-001] Door interlock response delay: 0.74 (analyst-supported)</p>
+<p>- [HYP-SYN-002] Wi-Fi roaming interruption: 0.28 (alternative)</p>
+<h2>Evidence and limitations</h2>
+<p>- [EV-SYN-001] supports: 18-second release-to-open interval overlaps the stop.</p>
+<p>- [EV-SYN-002] contradicts: No packet-loss record exists in the available synthetic Wi-Fi window.</p>
+<p>- [EV-SYN-003] missing_expected: Door controller diagnostic trace was intentionally omitted from the fixture.</p>
+<h2>Reconstructed timeline</h2>
+<p>See `timeline.csv`; every row cites synthetic raw evidence.</p>
+<h2>Provenance</h2>
+<p>Generated deterministically from `scripts/generate_sample_diagnostic.py`. This artifact demonstrates product format and is not a validated customer outcome.</p></body>

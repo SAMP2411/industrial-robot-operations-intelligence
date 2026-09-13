@@ -1,0 +1,14 @@
+version: report.v1
+profiles:
+  executive:
+    audience: [operations manager, plant manager, budget owner]
+    sections: [executive_summary, impact, downtime, likely_failure_domain, limitations, actions, business_implications]
+    confidentiality: CONFIDENTIAL — EXECUTIVE DIAGNOSTIC
+  technical:
+    audience: [automation engineer, maintenance engineer, integrator, network engineer]
+    sections: [timeline, evidence, hypotheses, clock_adjustments, data_quality, corrective_actions, source_appendix]
+    confidentiality: CONFIDENTIAL — TECHNICAL DIAGNOSTIC
+  vendor_support:
+    audience: [robot vendor, fleet vendor, WCS vendor, network vendor]
+    sections: [reproducible_chronology, selected_evidence, product_versions, event_codes, questions, limitations]
+    confidentiality: CONFIDENTIAL — SELECTED VENDOR SUPPORT EVIDENCE

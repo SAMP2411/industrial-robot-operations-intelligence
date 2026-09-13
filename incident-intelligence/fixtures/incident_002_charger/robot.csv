@@ -1,0 +1,5 @@
+record_id,event_time,asset_id,event_type,event_code,severity,message
+r1,2026-04-08T02:00:00Z,AMR-03,robot.charging,CHARGING_STARTED,info,Charging state entered at 19 percent
+r2,2026-04-08T02:08:00Z,AMR-03,robot.battery,BATTERY_STATIC,warning,Battery remains at 19 percent
+r3,2026-04-08T02:22:00Z,AMR-03,robot.charging,CHARGING_RECOVERED,info,Battery increased to 22 percent
+

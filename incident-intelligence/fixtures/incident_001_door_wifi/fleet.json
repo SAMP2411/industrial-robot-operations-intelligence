@@ -1,0 +1,6 @@
+{"records":[
+  {"record_id":"f1","event_time":"2026-04-07T09:13:05Z","asset_id":"AMR-07","event_type":"fleet.command","event_code":"MISSION_PAUSED","severity":"warning","message":"Door command acknowledgment delayed"},
+  {"record_id":"f2","event_time":"2026-04-07T09:13:18Z","asset_id":"AMR-07","event_type":"fleet.command","event_code":"MISSION_RESUMED","severity":"info","message":"Operator retry accepted"},
+  {"record_id":"f3","event_time":"2026-04-07T09:14:30Z","asset_id":"AMR-09","event_type":"fleet.telemetry","event_code":"HEARTBEAT","severity":"info","message":"Unrelated robot online"}
+]}
+

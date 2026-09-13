@@ -1,0 +1,2855 @@
+header {
+  stamp {
+    sec: 79
+    nsec: 866000000
+  }
+}
+pose {
+  name: "ground_plane"
+  id: 4
+  position {
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "warehouse"
+  id: 7
+  position {
+    z: -0.1
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "shelf_big_0"
+  id: 12
+  position {
+    x: -8.5
+    y: -13
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "shelf_big_1"
+  id: 16
+  position {
+    x: 6.5
+    y: -13
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "shelf_big_2"
+  id: 20
+  position {
+    x: -1.5
+    y: -13
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "shelf_3"
+  id: 24
+  position {
+    x: 13.5
+    y: 4.5
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "shelf_4"
+  id: 28
+  position {
+    x: 10
+    y: 4.5
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "shelf_5"
+  id: 32
+  position {
+    x: 13.5
+    y: -21
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "shelf_6"
+  id: 36
+  position {
+    x: 13.5
+    y: -15
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "shelf_7"
+  id: 40
+  position {
+    x: 0.4
+    y: -2
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "shelf_big_3"
+  id: 44
+  position {
+    x: 3.5
+    y: 9.5
+  }
+  orientation {
+    z: 0.70682518110536585
+    w: 0.70738826916719977
+  }
+}
+pose {
+  name: "shelf_big_4"
+  id: 48
+  position {
+    x: -1.3
+    y: 18.5
+  }
+  orientation {
+    z: 0.70682518110536585
+    w: 0.70738826916719977
+  }
+}
+pose {
+  name: "shelf_0"
+  id: 52
+  position {
+    x: -10
+    y: 21.5
+  }
+  orientation {
+    z: 0.70682518110536585
+    w: 0.70738826916719977
+  }
+}
+pose {
+  name: "shelf_1"
+  id: 56
+  position {
+    x: -6.9999999999999991
+    y: 23.6
+  }
+  orientation {
+    z: 0.70682518110536585
+    w: 0.70738826916719977
+  }
+}
+pose {
+  name: "shelf_2"
+  id: 60
+  position {
+    x: -3.9999999999999996
+    y: 21.5
+  }
+  orientation {
+    z: 0.70682518110536585
+    w: 0.70738826916719977
+  }
+}
+pose {
+  name: "inspection_station_spawn_lane"
+  id: 64
+  position {
+    x: 2.121
+    y: -20.05
+  }
+  orientation {
+    z: -0.70753221584407411
+    w: 0.70668109040979343
+  }
+}
+pose {
+  name: "inspection_station_east_aisle"
+  id: 79
+  position {
+    x: 5.45
+    y: -21.3
+  }
+  orientation {
+    z: 0.99999997925861284
+    w: -0.0002036732036950783
+  }
+}
+pose {
+  name: "inspection_station_upper_right_turn"
+  id: 94
+  position {
+    x: 4.201
+    y: -17.25
+  }
+  orientation {
+    z: -0.70753221584407411
+    w: 0.70668109040979343
+  }
+}
+pose {
+  name: "inspection_station_upper_left_turn"
+  id: 109
+  position {
+    x: -0.25
+    y: -18.498
+  }
+  orientation {
+    z: -0.00099999983333334168
+    w: 0.99999950000004167
+  }
+}
+pose {
+  name: "inspection_station_west_aisle"
+  id: 123
+  position {
+    x: 1.001
+    y: -22.55
+  }
+  orientation {
+    z: 0.70753221584407411
+    w: 0.70668109040979343
+  }
+}
+pose {
+  name: "inspection_station_mid_east_service_bay"
+  id: 137
+  position {
+    x: 7.25
+    y: -7.998
+  }
+  orientation {
+    z: -0.00099999983333334168
+    w: 0.99999950000004167
+  }
+}
+pose {
+  name: "inspection_station_upper_east_utility_lane"
+  id: 152
+  position {
+    x: 8.75
+    y: 5.002
+  }
+  orientation {
+    z: -0.00099999983333334168
+    w: 0.99999950000004167
+  }
+}
+pose {
+  name: "inspection_station_north_center_crossing"
+  id: 167
+  position {
+    x: -0.999
+    y: 16.25
+  }
+  orientation {
+    z: -0.70753221584407411
+    w: 0.70668109040979343
+  }
+}
+pose {
+  name: "inspection_station_north_west_return"
+  id: 181
+  position {
+    x: -2.75
+    y: 21
+  }
+  orientation {
+    z: 0.99999997925861284
+    w: -0.0002036732036950783
+  }
+}
+pose {
+  name: "inspection_station_mid_west_aisle"
+  id: 195
+  position {
+    x: -5.75
+    y: -8
+  }
+  orientation {
+    z: 0.99999997925861284
+    w: -0.0002036732036950783
+  }
+}
+pose {
+  name: "decor_crate_0"
+  id: 209
+  position {
+    x: -12.4
+    y: -22.8
+  }
+  orientation {
+    z: -0.66612412729075909
+    w: 0.745840899281559
+  }
+}
+pose {
+  name: "decor_drum_1"
+  id: 213
+  position {
+    x: 9.8
+    y: -21.8
+  }
+  orientation {
+    z: 0.969577779051698
+    w: -0.24478343565114191
+  }
+}
+pose {
+  name: "decor_cone_2"
+  id: 217
+  position {
+    x: 7.8
+    y: -22.5
+  }
+  orientation {
+    z: 0.92966408789214106
+    w: 0.36840831109473288
+  }
+}
+pose {
+  name: "decor_pipe_rack_3"
+  id: 222
+  position {
+    x: -10.8
+    y: -22
+  }
+  orientation {
+    z: 0.883602050805471
+    w: 0.46823863126867882
+  }
+}
+pose {
+  name: "decor_crate_4"
+  id: 227
+  position {
+    x: -11.7
+    y: 18.5
+  }
+  orientation {
+    z: -0.69217622083258878
+    w: 0.72172853574866735
+  }
+}
+pose {
+  name: "decor_drum_5"
+  id: 231
+  position {
+    x: 8.6
+    y: 8.1
+  }
+  orientation {
+    z: 0.99705261108468868
+    w: 0.076720862411762153
+  }
+}
+pose {
+  name: "decor_cone_6"
+  id: 235
+  position {
+    x: -2
+    y: 11.8
+  }
+  orientation {
+    z: 0.866925220917477
+    w: -0.49843822218724726
+  }
+}
+pose {
+  name: "decor_pipe_rack_7"
+  id: 240
+  position {
+    x: -5
+    y: 11
+  }
+  orientation {
+    z: -0.6334471140979292
+    w: 0.77378598697637646
+  }
+}
+pose {
+  name: "decor_crate_8"
+  id: 245
+  position {
+    x: -13.6
+    y: 18
+  }
+  orientation {
+    z: -0.64306969964222571
+    w: 0.76580765300567322
+  }
+}
+pose {
+  name: "decor_drum_9"
+  id: 249
+  position {
+    x: 12.4
+    y: 8.7
+  }
+  orientation {
+    z: 0.96501484777630353
+    w: -0.262195239413834
+  }
+}
+pose {
+  name: "turtlebot4"
+  id: 253
+  position {
+    x: 8.751405519061997
+    y: -13.809232415079238
+    z: -0.0044496537793243165
+  }
+  orientation {
+    x: 0.0015378103184092566
+    y: -0.0015519819680144338
+    z: 0.70385529157060334
+    w: 0.71034002774689287
+  }
+}
+pose {
+  name: "link"
+  id: 5
+  position {
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "warehouse_base"
+  id: 8
+  position {
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "shelf_big_base"
+  id: 13
+  position {
+    x: -0.5
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "shelf_big_base"
+  id: 17
+  position {
+    x: -0.5
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "shelf_big_base"
+  id: 21
+  position {
+    x: -0.5
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "shelf_base"
+  id: 25
+  position {
+    x: -0.5
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "shelf_base"
+  id: 29
+  position {
+    x: -0.5
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "shelf_base"
+  id: 33
+  position {
+    x: -0.5
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "shelf_base"
+  id: 37
+  position {
+    x: -0.5
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "shelf_base"
+  id: 41
+  position {
+    x: -0.5
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "shelf_big_base"
+  id: 45
+  position {
+    x: -0.5
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "shelf_big_base"
+  id: 49
+  position {
+    x: -0.5
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "shelf_base"
+  id: 53
+  position {
+    x: -0.5
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "shelf_base"
+  id: 57
+  position {
+    x: -0.5
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "shelf_base"
+  id: 61
+  position {
+    x: -0.5
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "cabinet"
+  id: 65
+  position {
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "cabinet"
+  id: 80
+  position {
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "cabinet"
+  id: 95
+  position {
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "cabinet"
+  id: 110
+  position {
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "cabinet"
+  id: 124
+  position {
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "cabinet"
+  id: 138
+  position {
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "cabinet"
+  id: 153
+  position {
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "cabinet"
+  id: 168
+  position {
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "cabinet"
+  id: 182
+  position {
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "cabinet"
+  id: 196
+  position {
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "crate"
+  id: 210
+  position {
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "drum"
+  id: 214
+  position {
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "cone"
+  id: 218
+  position {
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "rack"
+  id: 223
+  position {
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "crate"
+  id: 228
+  position {
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "drum"
+  id: 232
+  position {
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "cone"
+  id: 236
+  position {
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "rack"
+  id: 241
+  position {
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "crate"
+  id: 246
+  position {
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "drum"
+  id: 250
+  position {
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "base_link"
+  id: 254
+  position {
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "front_caster_link"
+  id: 262
+  position {
+    x: 0.12500000000000533
+    y: 5.3290705182007514e-15
+    z: 0.013899999999999989
+  }
+  orientation {
+    x: -0.70710678118654657
+    y: -1.6653345369377348e-16
+    z: -4.4408920985006262e-16
+    w: 0.70710678118654768
+  }
+}
+pose {
+  name: "front_left_bottom_weight_block"
+  id: 265
+  position {
+    x: 0.060052669999999253
+    y: 0.087588410000003947
+    z: 0.097885460000000063
+  }
+  orientation {
+    x: -4.3368086899420177e-19
+    y: 4.3368086899420177e-19
+    w: 1
+  }
+}
+pose {
+  name: "front_left_top_weight_block"
+  id: 267
+  position {
+    x: 0.060052670000002806
+    y: 0.087588410000003947
+    z: 0.10688546000000002
+  }
+  orientation {
+    x: -4.3368086899420177e-19
+    y: 4.3368086899420177e-19
+    w: 1
+  }
+}
+pose {
+  name: "front_right_bottom_weight_block"
+  id: 269
+  position {
+    x: 0.060052670000004582
+    y: -0.087588409999995065
+    z: 0.097885460000000007
+  }
+  orientation {
+    x: 1.0000000000000002
+    y: 2.2204460492503131e-16
+    z: 1.4419888894057209e-16
+    w: -8.2833045977892539e-17
+  }
+}
+pose {
+  name: "front_right_top_weight_block"
+  id: 271
+  position {
+    x: 0.060052670000006358
+    y: -0.087588409999993289
+    z: 0.10688546000000002
+  }
+  orientation {
+    x: 1.0000000000000002
+    y: 2.2204460492503131e-16
+    z: 1.4419888894057209e-16
+    w: -8.2833045977892539e-17
+  }
+}
+pose {
+  name: "imu_link"
+  id: 273
+  position {
+    x: 0.050613000000003794
+    y: 0.043673000000003626
+    z: 0.084400000000000031
+  }
+  orientation {
+    x: -4.3368086899420177e-19
+    y: 4.3368086899420177e-19
+    w: 1
+  }
+}
+pose {
+  name: "left_wheel"
+  id: 275
+  position {
+    x: 5.3290705182007514e-15
+    y: 0.11650000000000738
+    z: 0.040200000000000007
+  }
+  orientation {
+    x: -0.22877249771171887
+    y: 0.669076336669248
+    z: 0.66907633666924859
+    w: 0.22877249771171904
+  }
+}
+pose {
+  name: "right_wheel"
+  id: 278
+  position {
+    x: 3.5527136788005009e-15
+    y: -0.11649999999999316
+    z: 0.040199999999999993
+  }
+  orientation {
+    x: 0.70688984964634216
+    y: -0.017514007735845882
+    z: -0.017514007735846049
+    w: -0.70688984964634249
+  }
+}
+pose {
+  name: "front_left_tower_standoff"
+  id: 281
+  position {
+    x: 0.030630000000000379
+    y: 0.11431000000000147
+    z: 0.24177
+  }
+  orientation {
+    x: -4.3368086899420177e-19
+    y: 4.3368086899420177e-19
+    w: 1
+  }
+}
+pose {
+  name: "front_right_tower_standoff"
+  id: 284
+  position {
+    x: 0.030630000000003932
+    y: -0.11430999999999258
+    z: 0.24176999999999996
+  }
+  orientation {
+    x: -4.3368086899420177e-19
+    y: 4.3368086899420177e-19
+    w: 1
+  }
+}
+pose {
+  name: "oakd_camera_bracket"
+  id: 287
+  position {
+    x: -0.11799999999999677
+    y: 1.7763568394002505e-15
+    z: 0.14676999999999998
+  }
+  orientation {
+    x: -4.3368086899420177e-19
+    y: 4.3368086899420177e-19
+    w: 1
+  }
+}
+pose {
+  name: "oakd_link"
+  id: 289
+  position {
+    x: -0.059600000000004982
+    y: 5.3290705182007514e-15
+    z: 0.24353000000000005
+  }
+  orientation {
+    x: -4.3368086899420177e-19
+    y: 4.3368086899420177e-19
+    w: 1
+  }
+}
+pose {
+  name: "oakd_imu_frame"
+  id: 292
+  position {
+    x: -0.059600000000004982
+    y: 5.3290705182007514e-15
+    z: 0.24353000000000005
+  }
+  orientation {
+    x: -0.49999999999999983
+    y: 0.4999999999999995
+    z: -0.50000000000000011
+    w: 0.50000000000000033
+  }
+}
+pose {
+  name: "oakd_left_camera_frame"
+  id: 293
+  position {
+    x: -0.05960000000000143
+    y: 0.0375000000000032
+    z: 0.24353
+  }
+  orientation {
+    x: -4.3368086899420177e-19
+    y: 4.3368086899420177e-19
+    w: 1
+  }
+}
+pose {
+  name: "oakd_left_camera_optical_frame"
+  id: 294
+  position {
+    x: -0.05960000000000143
+    y: 0.0375000000000032
+    z: 0.24353
+  }
+  orientation {
+    x: -0.49999999999999983
+    y: 0.4999999999999995
+    z: -0.50000000000000011
+    w: 0.50000000000000033
+  }
+}
+pose {
+  name: "oakd_rgb_camera_frame"
+  id: 295
+  position {
+    x: -0.059600000000004982
+    y: 5.3290705182007514e-15
+    z: 0.24353000000000005
+  }
+  orientation {
+    x: -4.3368086899420177e-19
+    y: 4.3368086899420177e-19
+    w: 1
+  }
+}
+pose {
+  name: "oakd_rgb_camera_optical_frame"
+  id: 297
+  position {
+    x: -0.059600000000004982
+    y: 5.3290705182007514e-15
+    z: 0.24353000000000005
+  }
+  orientation {
+    x: -0.49999999999999983
+    y: 0.4999999999999995
+    z: -0.50000000000000011
+    w: 0.50000000000000033
+  }
+}
+pose {
+  name: "oakd_right_camera_frame"
+  id: 298
+  position {
+    x: -0.05960000000000143
+    y: -0.037499999999992539
+    z: 0.24353
+  }
+  orientation {
+    x: -4.3368086899420177e-19
+    y: 4.3368086899420177e-19
+    w: 1
+  }
+}
+pose {
+  name: "oakd_right_camera_optical_frame"
+  id: 299
+  position {
+    x: -0.05960000000000143
+    y: -0.037499999999992539
+    z: 0.24353
+  }
+  orientation {
+    x: -0.49999999999999983
+    y: 0.4999999999999995
+    z: -0.50000000000000011
+    w: 0.50000000000000033
+  }
+}
+pose {
+  name: "rear_left_tower_standoff"
+  id: 300
+  position {
+    x: -0.076070000000003191
+    y: 0.0906600000000033
+    z: 0.24177
+  }
+  orientation {
+    x: -4.3368086899420177e-19
+    y: 4.3368086899420177e-19
+    w: 1
+  }
+}
+pose {
+  name: "rear_right_tower_standoff"
+  id: 303
+  position {
+    x: -0.076069999999997862
+    y: -0.090659999999994412
+    z: 0.24176999999999996
+  }
+  orientation {
+    x: -4.3368086899420177e-19
+    y: 4.3368086899420177e-19
+    w: 1
+  }
+}
+pose {
+  name: "rplidar_link"
+  id: 306
+  position {
+    x: -0.039999999999997371
+    y: 3.5527136788005009e-15
+    z: 0.19291499999999998
+  }
+  orientation {
+    x: 4.3368086899420177e-19
+    y: 7.95363937471788e-19
+    z: 0.70710678118654724
+    w: 0.70710678118654779
+  }
+}
+pose {
+  name: "tower_sensor_plate"
+  id: 310
+  position {
+    x: 1.7763568394002505e-15
+    y: 3.5527136788005009e-15
+    z: 0.34676999999999997
+  }
+  orientation {
+    x: -4.3368086899420177e-19
+    y: 4.3368086899420177e-19
+    w: 1
+  }
+}
+pose {
+  name: "warehouse_visual"
+  id: 9
+  position {
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "drop_area_visual"
+  id: 10
+  position {
+    z: 0.101
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "shelf_big_chassi_visual"
+  id: 14
+  position {
+  }
+  orientation {
+    z: 0.70710678118481629
+    w: 0.70710678118827874
+  }
+}
+pose {
+  name: "shelf_big_chassi_visual"
+  id: 18
+  position {
+  }
+  orientation {
+    z: 0.70710678118481629
+    w: 0.70710678118827874
+  }
+}
+pose {
+  name: "shelf_big_chassi_visual"
+  id: 22
+  position {
+  }
+  orientation {
+    z: 0.70710678118481629
+    w: 0.70710678118827874
+  }
+}
+pose {
+  name: "shelf_chassi_visual"
+  id: 26
+  position {
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "shelf_chassi_visual"
+  id: 30
+  position {
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "shelf_chassi_visual"
+  id: 34
+  position {
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "shelf_chassi_visual"
+  id: 38
+  position {
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "shelf_chassi_visual"
+  id: 42
+  position {
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "shelf_big_chassi_visual"
+  id: 46
+  position {
+  }
+  orientation {
+    z: 0.70710678118481629
+    w: 0.70710678118827874
+  }
+}
+pose {
+  name: "shelf_big_chassi_visual"
+  id: 50
+  position {
+  }
+  orientation {
+    z: 0.70710678118481629
+    w: 0.70710678118827874
+  }
+}
+pose {
+  name: "shelf_chassi_visual"
+  id: 54
+  position {
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "shelf_chassi_visual"
+  id: 58
+  position {
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "shelf_chassi_visual"
+  id: 62
+  position {
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "cabinet_body"
+  id: 66
+  position {
+    z: 0.46
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "base_plinth"
+  id: 67
+  position {
+    z: 0.08
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "front_bezel"
+  id: 68
+  position {
+    x: 0.162
+    z: 0.58
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "front_signal"
+  id: 69
+  position {
+    x: 0.176
+    z: 0.58
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "header_strip"
+  id: 70
+  position {
+    z: 0.81
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "service_drawer"
+  id: 71
+  position {
+    x: 0.151
+    z: 0.24
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "signal_beacon"
+  id: 72
+  position {
+    x: 0.12
+    z: 0.92
+  }
+  orientation {
+    x: 0.70717878687206648
+    w: 0.70703476816784083
+  }
+}
+pose {
+  name: "signal_beacon_base"
+  id: 73
+  position {
+    x: 0.1
+    z: 0.92
+  }
+  orientation {
+    x: 0.70717878687206648
+    w: 0.70703476816784083
+  }
+}
+pose {
+  name: "floor_plate"
+  id: 74
+  position {
+    z: 0.02
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "conveyor_head"
+  id: 75
+  position {
+    z: 0.42
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "roller_a"
+  id: 76
+  position {
+    x: -0.18
+    z: 0.42
+  }
+  orientation {
+    x: 0.70717878687206648
+    w: 0.70703476816784083
+  }
+}
+pose {
+  name: "roller_b"
+  id: 77
+  position {
+    x: 0.18
+    z: 0.42
+  }
+  orientation {
+    x: 0.70717878687206648
+    w: 0.70703476816784083
+  }
+}
+pose {
+  name: "cabinet_body"
+  id: 81
+  position {
+    z: 0.46
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "base_plinth"
+  id: 82
+  position {
+    z: 0.08
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "front_bezel"
+  id: 83
+  position {
+    x: 0.162
+    z: 0.58
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "front_signal"
+  id: 84
+  position {
+    x: 0.176
+    z: 0.58
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "header_strip"
+  id: 85
+  position {
+    z: 0.81
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "service_drawer"
+  id: 86
+  position {
+    x: 0.151
+    z: 0.24
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "signal_beacon"
+  id: 87
+  position {
+    x: 0.12
+    z: 0.92
+  }
+  orientation {
+    x: 0.70717878687206648
+    w: 0.70703476816784083
+  }
+}
+pose {
+  name: "signal_beacon_base"
+  id: 88
+  position {
+    x: 0.1
+    z: 0.92
+  }
+  orientation {
+    x: 0.70717878687206648
+    w: 0.70703476816784083
+  }
+}
+pose {
+  name: "floor_plate"
+  id: 89
+  position {
+    z: 0.02
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "pump_body"
+  id: 90
+  position {
+    y: 0.18
+    z: 0.32
+  }
+  orientation {
+    x: 0.70717878687206648
+    w: 0.70703476816784083
+  }
+}
+pose {
+  name: "pump_motor"
+  id: 91
+  position {
+    x: -0.02
+    y: -0.18
+    z: 0.34
+  }
+  orientation {
+    x: 0.70717878687206648
+    w: 0.70703476816784083
+  }
+}
+pose {
+  name: "pump_skid"
+  id: 92
+  position {
+    z: 0.18
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "cabinet_body"
+  id: 96
+  position {
+    z: 0.46
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "base_plinth"
+  id: 97
+  position {
+    z: 0.08
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "front_bezel"
+  id: 98
+  position {
+    x: 0.162
+    z: 0.58
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "front_signal"
+  id: 99
+  position {
+    x: 0.176
+    z: 0.58
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "header_strip"
+  id: 100
+  position {
+    z: 0.81
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "service_drawer"
+  id: 101
+  position {
+    x: 0.151
+    z: 0.24
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "signal_beacon"
+  id: 102
+  position {
+    x: 0.12
+    z: 0.92
+  }
+  orientation {
+    x: 0.70717878687206648
+    w: 0.70703476816784083
+  }
+}
+pose {
+  name: "signal_beacon_base"
+  id: 103
+  position {
+    x: 0.1
+    z: 0.92
+  }
+  orientation {
+    x: 0.70717878687206648
+    w: 0.70703476816784083
+  }
+}
+pose {
+  name: "floor_plate"
+  id: 104
+  position {
+    z: 0.02
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "compressor_tank_a"
+  id: 105
+  position {
+    y: 0.18
+    z: 0.34
+  }
+  orientation {
+    x: 0.70717878687206648
+    w: 0.70703476816784083
+  }
+}
+pose {
+  name: "compressor_tank_b"
+  id: 106
+  position {
+    y: -0.18
+    z: 0.34
+  }
+  orientation {
+    x: 0.70717878687206648
+    w: 0.70703476816784083
+  }
+}
+pose {
+  name: "compressor_top"
+  id: 107
+  position {
+    z: 0.62
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "cabinet_body"
+  id: 111
+  position {
+    z: 0.46
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "base_plinth"
+  id: 112
+  position {
+    z: 0.08
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "front_bezel"
+  id: 113
+  position {
+    x: 0.162
+    z: 0.58
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "front_signal"
+  id: 114
+  position {
+    x: 0.176
+    z: 0.58
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "header_strip"
+  id: 115
+  position {
+    z: 0.81
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "service_drawer"
+  id: 116
+  position {
+    x: 0.151
+    z: 0.24
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "signal_beacon"
+  id: 117
+  position {
+    x: 0.12
+    z: 0.92
+  }
+  orientation {
+    x: 0.70717878687206648
+    w: 0.70703476816784083
+  }
+}
+pose {
+  name: "signal_beacon_base"
+  id: 118
+  position {
+    x: 0.1
+    z: 0.92
+  }
+  orientation {
+    x: 0.70717878687206648
+    w: 0.70703476816784083
+  }
+}
+pose {
+  name: "floor_plate"
+  id: 119
+  position {
+    z: 0.02
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "panel_door"
+  id: 120
+  position {
+    x: 0.142
+    z: 0.5
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "panel_breakers"
+  id: 121
+  position {
+    x: 0.151
+    z: 0.52
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "cabinet_body"
+  id: 125
+  position {
+    z: 0.46
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "base_plinth"
+  id: 126
+  position {
+    z: 0.08
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "front_bezel"
+  id: 127
+  position {
+    x: 0.162
+    z: 0.58
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "front_signal"
+  id: 128
+  position {
+    x: 0.176
+    z: 0.58
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "header_strip"
+  id: 129
+  position {
+    z: 0.81
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "service_drawer"
+  id: 130
+  position {
+    x: 0.151
+    z: 0.24
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "signal_beacon"
+  id: 131
+  position {
+    x: 0.12
+    z: 0.92
+  }
+  orientation {
+    x: 0.70717878687206648
+    w: 0.70703476816784083
+  }
+}
+pose {
+  name: "signal_beacon_base"
+  id: 132
+  position {
+    x: 0.1
+    z: 0.92
+  }
+  orientation {
+    x: 0.70717878687206648
+    w: 0.70703476816784083
+  }
+}
+pose {
+  name: "floor_plate"
+  id: 133
+  position {
+    z: 0.02
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "valve_body"
+  id: 134
+  position {
+    z: 0.4
+  }
+  orientation {
+    x: 0.70717878687206648
+    w: 0.70703476816784083
+  }
+}
+pose {
+  name: "valve_wheel"
+  id: 135
+  position {
+    x: 0.16
+    z: 0.56
+  }
+  orientation {
+    y: 0.70717878687206648
+    w: 0.70703476816784083
+  }
+}
+pose {
+  name: "cabinet_body"
+  id: 139
+  position {
+    z: 0.46
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "base_plinth"
+  id: 140
+  position {
+    z: 0.08
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "front_bezel"
+  id: 141
+  position {
+    x: 0.162
+    z: 0.58
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "front_signal"
+  id: 142
+  position {
+    x: 0.176
+    z: 0.58
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "header_strip"
+  id: 143
+  position {
+    z: 0.81
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "service_drawer"
+  id: 144
+  position {
+    x: 0.151
+    z: 0.24
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "signal_beacon"
+  id: 145
+  position {
+    x: 0.12
+    z: 0.92
+  }
+  orientation {
+    x: 0.70717878687206648
+    w: 0.70703476816784083
+  }
+}
+pose {
+  name: "signal_beacon_base"
+  id: 146
+  position {
+    x: 0.1
+    z: 0.92
+  }
+  orientation {
+    x: 0.70717878687206648
+    w: 0.70703476816784083
+  }
+}
+pose {
+  name: "floor_plate"
+  id: 147
+  position {
+    z: 0.02
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "conveyor_head"
+  id: 148
+  position {
+    z: 0.42
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "roller_a"
+  id: 149
+  position {
+    x: -0.18
+    z: 0.42
+  }
+  orientation {
+    x: 0.70717878687206648
+    w: 0.70703476816784083
+  }
+}
+pose {
+  name: "roller_b"
+  id: 150
+  position {
+    x: 0.18
+    z: 0.42
+  }
+  orientation {
+    x: 0.70717878687206648
+    w: 0.70703476816784083
+  }
+}
+pose {
+  name: "cabinet_body"
+  id: 154
+  position {
+    z: 0.46
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "base_plinth"
+  id: 155
+  position {
+    z: 0.08
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "front_bezel"
+  id: 156
+  position {
+    x: 0.162
+    z: 0.58
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "front_signal"
+  id: 157
+  position {
+    x: 0.176
+    z: 0.58
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "header_strip"
+  id: 158
+  position {
+    z: 0.81
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "service_drawer"
+  id: 159
+  position {
+    x: 0.151
+    z: 0.24
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "signal_beacon"
+  id: 160
+  position {
+    x: 0.12
+    z: 0.92
+  }
+  orientation {
+    x: 0.70717878687206648
+    w: 0.70703476816784083
+  }
+}
+pose {
+  name: "signal_beacon_base"
+  id: 161
+  position {
+    x: 0.1
+    z: 0.92
+  }
+  orientation {
+    x: 0.70717878687206648
+    w: 0.70703476816784083
+  }
+}
+pose {
+  name: "floor_plate"
+  id: 162
+  position {
+    z: 0.02
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "pump_body"
+  id: 163
+  position {
+    y: 0.18
+    z: 0.32
+  }
+  orientation {
+    x: 0.70717878687206648
+    w: 0.70703476816784083
+  }
+}
+pose {
+  name: "pump_motor"
+  id: 164
+  position {
+    x: -0.02
+    y: -0.18
+    z: 0.34
+  }
+  orientation {
+    x: 0.70717878687206648
+    w: 0.70703476816784083
+  }
+}
+pose {
+  name: "pump_skid"
+  id: 165
+  position {
+    z: 0.18
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "cabinet_body"
+  id: 169
+  position {
+    z: 0.46
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "base_plinth"
+  id: 170
+  position {
+    z: 0.08
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "front_bezel"
+  id: 171
+  position {
+    x: 0.162
+    z: 0.58
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "front_signal"
+  id: 172
+  position {
+    x: 0.176
+    z: 0.58
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "header_strip"
+  id: 173
+  position {
+    z: 0.81
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "service_drawer"
+  id: 174
+  position {
+    x: 0.151
+    z: 0.24
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "signal_beacon"
+  id: 175
+  position {
+    x: 0.12
+    z: 0.92
+  }
+  orientation {
+    x: 0.70717878687206648
+    w: 0.70703476816784083
+  }
+}
+pose {
+  name: "signal_beacon_base"
+  id: 176
+  position {
+    x: 0.1
+    z: 0.92
+  }
+  orientation {
+    x: 0.70717878687206648
+    w: 0.70703476816784083
+  }
+}
+pose {
+  name: "floor_plate"
+  id: 177
+  position {
+    z: 0.02
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "valve_body"
+  id: 178
+  position {
+    z: 0.4
+  }
+  orientation {
+    x: 0.70717878687206648
+    w: 0.70703476816784083
+  }
+}
+pose {
+  name: "valve_wheel"
+  id: 179
+  position {
+    x: 0.16
+    z: 0.56
+  }
+  orientation {
+    y: 0.70717878687206648
+    w: 0.70703476816784083
+  }
+}
+pose {
+  name: "cabinet_body"
+  id: 183
+  position {
+    z: 0.46
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "base_plinth"
+  id: 184
+  position {
+    z: 0.08
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "front_bezel"
+  id: 185
+  position {
+    x: 0.162
+    z: 0.58
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "front_signal"
+  id: 186
+  position {
+    x: 0.176
+    z: 0.58
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "header_strip"
+  id: 187
+  position {
+    z: 0.81
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "service_drawer"
+  id: 188
+  position {
+    x: 0.151
+    z: 0.24
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "signal_beacon"
+  id: 189
+  position {
+    x: 0.12
+    z: 0.92
+  }
+  orientation {
+    x: 0.70717878687206648
+    w: 0.70703476816784083
+  }
+}
+pose {
+  name: "signal_beacon_base"
+  id: 190
+  position {
+    x: 0.1
+    z: 0.92
+  }
+  orientation {
+    x: 0.70717878687206648
+    w: 0.70703476816784083
+  }
+}
+pose {
+  name: "floor_plate"
+  id: 191
+  position {
+    z: 0.02
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "panel_door"
+  id: 192
+  position {
+    x: 0.142
+    z: 0.5
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "panel_breakers"
+  id: 193
+  position {
+    x: 0.151
+    z: 0.52
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "cabinet_body"
+  id: 197
+  position {
+    z: 0.46
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "base_plinth"
+  id: 198
+  position {
+    z: 0.08
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "front_bezel"
+  id: 199
+  position {
+    x: 0.162
+    z: 0.58
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "front_signal"
+  id: 200
+  position {
+    x: 0.176
+    z: 0.58
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "header_strip"
+  id: 201
+  position {
+    z: 0.81
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "service_drawer"
+  id: 202
+  position {
+    x: 0.151
+    z: 0.24
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "signal_beacon"
+  id: 203
+  position {
+    x: 0.12
+    z: 0.92
+  }
+  orientation {
+    x: 0.70717878687206648
+    w: 0.70703476816784083
+  }
+}
+pose {
+  name: "signal_beacon_base"
+  id: 204
+  position {
+    x: 0.1
+    z: 0.92
+  }
+  orientation {
+    x: 0.70717878687206648
+    w: 0.70703476816784083
+  }
+}
+pose {
+  name: "floor_plate"
+  id: 205
+  position {
+    z: 0.02
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "valve_body"
+  id: 206
+  position {
+    z: 0.4
+  }
+  orientation {
+    x: 0.70717878687206648
+    w: 0.70703476816784083
+  }
+}
+pose {
+  name: "valve_wheel"
+  id: 207
+  position {
+    x: 0.16
+    z: 0.56
+  }
+  orientation {
+    y: 0.70717878687206648
+    w: 0.70703476816784083
+  }
+}
+pose {
+  name: "crate_visual"
+  id: 211
+  position {
+    z: 0.28
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "drum_visual"
+  id: 215
+  position {
+    z: 0.43
+  }
+  orientation {
+    x: 0.70717878687206648
+    w: 0.70703476816784083
+  }
+}
+pose {
+  name: "cone_base"
+  id: 219
+  position {
+    z: 0.06
+  }
+  orientation {
+    x: 0.70717878687206648
+    w: 0.70703476816784083
+  }
+}
+pose {
+  name: "cone_visual"
+  id: 220
+  position {
+    z: 0.22
+  }
+  orientation {
+    x: 0.70717878687206648
+    w: 0.70703476816784083
+  }
+}
+pose {
+  name: "rack_base"
+  id: 224
+  position {
+    z: 0.3
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "pipe_a"
+  id: 225
+  position {
+    z: 0.56
+  }
+  orientation {
+    x: 0.70717878687206648
+    w: 0.70703476816784083
+  }
+}
+pose {
+  name: "pipe_b"
+  id: 226
+  position {
+    z: 0.42
+  }
+  orientation {
+    x: 0.70717878687206648
+    w: 0.70703476816784083
+  }
+}
+pose {
+  name: "crate_visual"
+  id: 229
+  position {
+    z: 0.28
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "drum_visual"
+  id: 233
+  position {
+    z: 0.43
+  }
+  orientation {
+    x: 0.70717878687206648
+    w: 0.70703476816784083
+  }
+}
+pose {
+  name: "cone_base"
+  id: 237
+  position {
+    z: 0.06
+  }
+  orientation {
+    x: 0.70717878687206648
+    w: 0.70703476816784083
+  }
+}
+pose {
+  name: "cone_visual"
+  id: 238
+  position {
+    z: 0.22
+  }
+  orientation {
+    x: 0.70717878687206648
+    w: 0.70703476816784083
+  }
+}
+pose {
+  name: "rack_base"
+  id: 242
+  position {
+    z: 0.3
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "pipe_a"
+  id: 243
+  position {
+    z: 0.56
+  }
+  orientation {
+    x: 0.70717878687206648
+    w: 0.70703476816784083
+  }
+}
+pose {
+  name: "pipe_b"
+  id: 244
+  position {
+    z: 0.42
+  }
+  orientation {
+    x: 0.70717878687206648
+    w: 0.70703476816784083
+  }
+}
+pose {
+  name: "crate_visual"
+  id: 247
+  position {
+    z: 0.28
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "drum_visual"
+  id: 251
+  position {
+    z: 0.43
+  }
+  orientation {
+    x: 0.70717878687206648
+    w: 0.70703476816784083
+  }
+}
+pose {
+  name: "base_link_visual"
+  id: 255
+  position {
+    z: 0.039200000000000013
+  }
+  orientation {
+    z: 0.70710678118654724
+    w: 0.70710678118654779
+  }
+}
+pose {
+  name: "base_link_fixed_joint_lump__base_footprint_visual_1"
+  id: 256
+  position {
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "base_link_fixed_joint_lump__bumper_visual_2"
+  id: 257
+  position {
+    z: 0.039200000000000013
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "base_link_fixed_joint_lump__shell_link_visual_3"
+  id: 258
+  position {
+    z: 0.0942
+  }
+  orientation {
+    x: 0.5
+    y: 0.49999999999999961
+    z: 0.5
+    w: 0.50000000000000033
+  }
+}
+pose {
+  name: "front_caster_link_visual"
+  id: 263
+  position {
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "front_left_bottom_weight_block_visual"
+  id: 266
+  position {
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "front_left_top_weight_block_visual"
+  id: 268
+  position {
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "front_right_bottom_weight_block_visual"
+  id: 270
+  position {
+    y: -1.3877787807814457e-17
+    z: -1.3877787807814457e-17
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "front_right_top_weight_block_visual"
+  id: 272
+  position {
+    y: -1.3877787807814457e-17
+    z: -1.3877787807814457e-17
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "left_wheel_visual"
+  id: 276
+  position {
+    y: -1.3877787807814457e-17
+    z: 1.3877787807814457e-17
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "right_wheel_visual"
+  id: 279
+  position {
+    y: -6.9388939039072284e-18
+    z: 1.3877787807814457e-17
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "front_left_tower_standoff_visual"
+  id: 282
+  position {
+  }
+  orientation {
+    y: 0.70710678118654768
+    w: 0.70710678118654735
+  }
+}
+pose {
+  name: "front_right_tower_standoff_visual"
+  id: 285
+  position {
+  }
+  orientation {
+    y: 0.70710678118654768
+    w: 0.70710678118654735
+  }
+}
+pose {
+  name: "oakd_camera_bracket_visual"
+  id: 288
+  position {
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "oakd_link_visual"
+  id: 290
+  position {
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "rear_left_tower_standoff_visual"
+  id: 301
+  position {
+  }
+  orientation {
+    y: 0.70710678118654768
+    w: 0.70710678118654735
+  }
+}
+pose {
+  name: "rear_right_tower_standoff_visual"
+  id: 304
+  position {
+  }
+  orientation {
+    y: 0.70710678118654768
+    w: 0.70710678118654735
+  }
+}
+pose {
+  name: "rplidar_link_visual"
+  id: 307
+  position {
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "tower_sensor_plate_visual"
+  id: 311
+  position {
+  }
+  orientation {
+    w: 1
+  }
+}
+

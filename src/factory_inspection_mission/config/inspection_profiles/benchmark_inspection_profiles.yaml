@@ -1,0 +1,76 @@
+schema_version: inspection_profile.v1
+profiles:
+  - inspection_profile_id: conveyor_drive_standard
+    asset_type: conveyor_drive
+    required_skills: [visual_condition, external_measurement]
+    frequency:
+      interval_seconds: 3600
+    viewpoints:
+      - viewpoint_id: default_conveyor_view
+        position_tolerance_m: 1.75
+        orientation_tolerance_rad: 0.35
+    thresholds:
+      thermal_threshold_c: 18.0
+      acoustic_threshold_db: 72.0
+      gas_threshold_ppm: 45.0
+    escalation_policy_id: warning_then_hold_on_critical
+
+  - inspection_profile_id: pump_standard
+    asset_type: pump
+    required_skills: [visual_condition, external_measurement]
+    frequency:
+      interval_seconds: 3600
+    viewpoints:
+      - viewpoint_id: default_pump_view
+        position_tolerance_m: 1.75
+        orientation_tolerance_rad: 0.35
+    thresholds:
+      thermal_threshold_c: 18.0
+      acoustic_threshold_db: 72.0
+      gas_threshold_ppm: 45.0
+    escalation_policy_id: warning_then_hold_on_critical
+
+  - inspection_profile_id: compressor_gas_watch
+    asset_type: compressor
+    required_skills: [visual_condition, external_measurement, gas_condition]
+    frequency:
+      interval_seconds: 1800
+    viewpoints:
+      - viewpoint_id: default_compressor_view
+        position_tolerance_m: 1.75
+        orientation_tolerance_rad: 0.35
+    thresholds:
+      thermal_threshold_c: 18.0
+      acoustic_threshold_db: 72.0
+      gas_threshold_ppm: 45.0
+    escalation_policy_id: immediate_hold_on_critical
+
+  - inspection_profile_id: electrical_panel_standard
+    asset_type: electrical_panel
+    required_skills: [visual_condition, thermal_condition]
+    frequency:
+      interval_seconds: 3600
+    viewpoints:
+      - viewpoint_id: default_panel_view
+        position_tolerance_m: 1.75
+        orientation_tolerance_rad: 0.35
+    thresholds:
+      thermal_threshold_c: 18.0
+      acoustic_threshold_db: 72.0
+      gas_threshold_ppm: 45.0
+    escalation_policy_id: warning_then_hold_on_critical
+
+  - inspection_profile_id: valve_manifold_standard
+    asset_type: valve_manifold
+    required_skills: [visual_condition, gas_condition]
+    frequency:
+      interval_seconds: 3600
+    viewpoints:
+      - viewpoint_id: default_valve_view
+        position_tolerance_m: 1.75
+        orientation_tolerance_rad: 0.35
+    thresholds:
+      thermal_threshold_c: 18.0
+      acoustic_threshold_db: 72.0
+      gas_threshold_ppm: 45.0
+    escalation_policy_id: warning_then_hold_on_critical

@@ -1,0 +1,9 @@
+schema_version: synthetic_fixture.v1
+name: WCS integration delay
+simulated: true
+sources:
+  - {file: robot.csv, type: robot_controller}
+  - {file: fleet.json, type: fleet_manager}
+  - {file: wcs.jsonl, type: wcs}
+notes: Robot remains healthy while task confirmation is delayed.
+

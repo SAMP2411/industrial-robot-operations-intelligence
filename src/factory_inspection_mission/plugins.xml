@@ -1,0 +1,12 @@
+<class_libraries>
+  <library path="inspection_at_waypoint">
+    <class
+      type="factory_inspection_mission::InspectionAtWaypoint"
+      base_class_type="nav2_core::WaypointTaskExecutor">
+      <description>
+        Captures an RGB frame, assigns a deterministic inspection label from checkpoint YAML,
+        and saves evidence whenever Nav2 reaches a waypoint.
+      </description>
+    </class>
+  </library>
+</class_libraries>

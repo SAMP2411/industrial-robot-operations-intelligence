@@ -1,0 +1,4 @@
+{"record_id":"m1","event_time":"2026-04-08T02:14:00Z","asset_id":"CHARGER-02","event_type":"maintenance.action","event_code":"MAINTENANCE_ACTION","severity":"info","message":"Technician cleaned charging connector"}
+{"record_id":"m2","event_time":"2026-04-08T02:18:00Z","asset_id":"CHARGER-02","event_type":"maintenance.action","event_code":"MAINTENANCE_ACTION","severity":"info","message":"Connector reseated and test initiated"}
+{"record_id":"m3","event_time":"2026-04-08T03:00:00Z","asset_id":"DOOR-01","event_type":"maintenance.note","event_code":"ROUTINE_CHECK","severity":"info","message":"Unrelated door inspection"}
+

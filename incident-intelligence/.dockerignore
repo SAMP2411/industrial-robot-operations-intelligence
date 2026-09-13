@@ -1,0 +1,12 @@
+.git
+build
+install
+log
+storage
+backups
+docs/private
+__pycache__
+*.pyc
+*.db
+.env
+.venv

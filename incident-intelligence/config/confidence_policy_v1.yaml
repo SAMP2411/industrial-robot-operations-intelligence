@@ -1,0 +1,23 @@
+version: confidence.v1
+base_score: 0.30
+strength_weights:
+  direct: 1.0
+  strong_indirect: 0.75
+  weak_indirect: 0.35
+  contextual: 0.10
+relation_multipliers:
+  supports: 0.22
+  contradicts: -0.28
+  missing_expected: -0.10
+  contextual: 0.02
+origin_group_contribution_cap: 1.0
+caps:
+  missing_critical_source: 0.65
+  unresolved_clock_drift: 0.60
+  unreliable_mapping: 0.60
+  unreviewed_contradiction: 0.55
+confirmation_requirements:
+  human_confirmation_required: true
+  medium_high_requires_alternative: true
+rounding_decimal_places: 2
+display: percentage

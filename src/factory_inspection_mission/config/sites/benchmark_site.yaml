@@ -1,0 +1,11 @@
+schema_version: site.v1
+site_id: factory_demo_site
+name: Factory Demo Warehouse
+timezone: UTC
+map_id: nav2_warehouse
+coordinate_frame: map
+status: ACTIVE
+metadata:
+  environment: simulation
+  world_template: warehouse_template.sdf
+  description: Benchmark warehouse site used for single-robot patrol validation

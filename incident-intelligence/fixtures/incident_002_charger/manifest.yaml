@@ -1,0 +1,9 @@
+schema_version: synthetic_fixture.v1
+name: Charger intermittent contact
+simulated: true
+sources:
+  - {file: robot.csv, type: robot_controller}
+  - {file: charger.json, type: charger_plc}
+  - {file: maintenance.jsonl, type: maintenance_ticket}
+notes: Includes irrelevant dispatch noise and contradicting initial charging state.
+

@@ -1,0 +1,25 @@
+# ROS 2 workspace outputs
+build/
+install/
+log/
+
+# Local/private notes
+docs/private/
+
+# Local debug logs
+.codex_*.log
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store

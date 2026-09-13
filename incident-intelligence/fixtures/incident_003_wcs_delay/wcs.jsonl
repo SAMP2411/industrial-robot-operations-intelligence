@@ -1,0 +1,3 @@
+{"record_id":"w1","event_time":"2026-04-09T14:29:59Z","asset_id":"WCS-01","event_type":"wcs.integration","event_code":"TASK_DELAYED","severity":"error","message":"Outbound event queue blocked"}
+{"record_id":"w2","event_time":"2026-04-09T14:39:00Z","asset_id":"WCS-01","event_type":"maintenance.action","event_code":"MAINTENANCE_ACTION","severity":"info","message":"Operator restarted integration service"}
+{"record_id":"w3","event_time":"2026-04-09T14:41:58Z","asset_id":"WCS-01","event_type":"wcs.integration","event_code":"TASK_RESUMED","severity":"info","message":"Queue drained and confirmation delivered"}

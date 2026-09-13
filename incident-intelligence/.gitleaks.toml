@@ -1,0 +1,13 @@
+title = "RFII private-data and secret protection"
+
+[extend]
+useDefault = true
+
+[[rules]]
+id = "customer-export-marker"
+description = "Customer export marker must never enter Git"
+regex = '''(?i)(customer[ _-]?confidential|real[ _-]?customer[ _-]?data|private[ _-]?export)'''
+tags = ["customer-data"]
+
+[allowlist]
+paths = ['''docs/customer_data_pack/.*''', '''tests/.*''', '''next\.md''']
