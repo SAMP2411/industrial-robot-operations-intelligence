@@ -30,7 +30,7 @@ categories:
     score: 9
     target: 10
     evidence:
-      - docs/phase_reports/max_score_phases_02_to_10.md
+      - packages/ingestion_core/service.py
       - tests/unit/test_ingestion_hardening.py
     blockers:
       - No real export profile
@@ -43,7 +43,7 @@ categories:
     score: 15
     target: 15
     evidence:
-      - docs/phase_reports/max_score_phases_02_to_10.md
+      - packages/timeline_engine/service.py
       - tests/unit/test_incident_timing.py
     blockers: []
     completion_conditions:

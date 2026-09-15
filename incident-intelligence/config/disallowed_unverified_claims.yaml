@@ -24,7 +24,3 @@ allowed_context_markers:
   - "not yet "
   - "non-goal"
   - "unlike "
-excluded_paths:
-  - docs/project_dossier
-  - docs/phase_reports
-  - docs/CURRENT_STATUS_FOR_PLAN_COMPARISON.md

@@ -21,7 +21,7 @@ def test_product_ui_exposes_no_mission_dispatch():
 
 
 def test_readme_declares_read_only_product():
-    readme = (ROOT / "README.md").read_text().casefold()
+    readme = (ROOT.parent / "README.md").read_text().casefold()
     assert "read-only" in readme
     assert "not a robot-control product" in readme
 
@@ -42,4 +42,3 @@ def test_synthetic_fixtures_are_visibly_labelled():
 def test_report_requires_human_confirmation_for_causality():
     source = (ROOT / "apps/diagnostic_api/main.py").read_text()
     assert "human_approval_required" in source
-

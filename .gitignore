@@ -7,7 +7,6 @@ log/
 docs/private/
 
 # Local debug logs
-.codex_*.log
 
 # Python
 __pycache__/
